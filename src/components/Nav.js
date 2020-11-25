@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function Nav() {
 
   return (
-    <Box py={3} px={150} >
+    <Box py={3} px={150} fontFamily="Montserrat">
       <Grid templateColumns="repeat(2, 1fr)" gap={6}>
         <GridItem>
           <Button variant="outline">

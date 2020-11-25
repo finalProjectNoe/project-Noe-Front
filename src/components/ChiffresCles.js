@@ -6,12 +6,12 @@ function ChiffreCles() {
 
   return (
     <>
-      <Box p={20} bg="beige.100">
+      <Box p={20} bg="beige.100" fontFamily="Montserrat">
         <Grid m='auto' templateColumns="repeat(12, 1fr)" templateRows="repeat(3, 1fr)" gap={30}>
 
           <GridItem colSpan={3} rowSpan={3}>
             <Center>
-              <Heading as="h2">Chiffre-clés</Heading>
+              <Heading fontFamily="Montserrat" as="h2">Chiffres-clés</Heading>
             </Center>
           </GridItem>
           <GridItem colSpan={3} rowSpan={3} >

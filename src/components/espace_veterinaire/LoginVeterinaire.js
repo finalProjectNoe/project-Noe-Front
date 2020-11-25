@@ -10,10 +10,10 @@ function LoginVeterinaire() {
   return (
     <>
       <Nav />
-      <Box my={10} mx={5}>
+      <Box my={10} mx={5} >
         <Grid m='auto' templateColumns="repeat(12, 1fr)" templateRows="repeat(3, 1fr)" gap={30}>
 
-          <GridItem colStart={2} colSpan={4} rowSpan={3}>
+          <GridItem borderWidth="1px" borderRadius={5} p={50} colStart={2} colSpan={4} rowSpan={3}>
 
             <Center>
               <Heading mb={10}>Inscription</Heading>
@@ -40,7 +40,7 @@ function LoginVeterinaire() {
 
           </GridItem>
 
-          <GridItem colStart={8} colSpan={4} rowSpan={3}>
+          <GridItem borderWidth="1px" p={50} borderRadius={5} colStart={8} colSpan={4} rowSpan={3}>
 
             <Center>
               <Heading mb={10}>Connexion</Heading>

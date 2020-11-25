@@ -6,9 +6,9 @@ function CommentçaMarche() {
 
   return (
     <>
-      <Box p={20}>
+      <Box p={20} fontFamily="Montserrat">
         <Center>
-          <Heading mb={10} as="h2">Comment ça marche ?</Heading>
+          <Heading fontFamily="Montserrat" mb={10} as="h2">Comment ça marche ?</Heading>
         </Center>
         <Grid templateColumns="repeat(12, 1fr)" templateRows="repeat(3, 1fr)" gap={30} spacing={10}>
           <GridItem colSpan={4} rowSpan={3} shadow="md" borderWidth="1px" >

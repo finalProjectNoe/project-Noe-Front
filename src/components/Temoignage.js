@@ -6,9 +6,9 @@ function Temoignage() {
 
   return (
     <>
-      <Box p={20} bg="beige.100">
+      <Box p={20} bg="beige.100" fontFamily="Montserrat">
         <Center>
-          <Heading mb={10} as="h2">Témoignages</Heading>
+          <Heading fontFamily="Montserrat" mb={10} as="h2">Témoignages</Heading>
         </Center>
         <Grid templateColumns="repeat(12, 1fr)" templateRows="repeat(3, 1fr)" gap={30} spacing={10}>
           <GridItem colSpan={4} rowSpan={3}>
