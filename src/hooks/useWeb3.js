@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // export Web3 provider
 // export useWeb3()
 import React, { useCallback, useEffect, useReducer } from 'react'
@@ -13,14 +15,14 @@ import {
 // web3 reducer
 const web3Reducer = (state, action) => {
   switch (action.type) {
-    case 'SET_is_web3':
-      return { ...state, is_web3: action.is_web3 }
-    case 'SET_is_metamask':
-      return { ...state, is_metamask: action.is_metamask }
-    case 'SET_is_logged':
-      return { ...state, is_logged: action.is_logged }
-    case 'SET_account':
-      return { ...state, account: action.account }
+  case 'SET_is_web3':
+    return { ...state, is_web3: action.is_web3 }
+  case 'SET_is_metamask':
+    return { ...state, is_metamask: action.is_metamask }
+  case 'SET_is_logged':
+    return { ...state, is_logged: action.is_logged }
+  case 'SET_account':
+    return { ...state, account: action.account }
     case 'SET_provider':
       return { ...state, provider: action.provider }
     case 'SET_signer':
