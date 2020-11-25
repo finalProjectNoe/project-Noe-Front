@@ -6,29 +6,29 @@ function Temoignage() {
 
   return (
     <>
-      <Box mx={5}>
+      <Box p={20} bg="beige.100">
         <Center>
-          <Heading my={10} as="h2">Témoignages</Heading>
+          <Heading mb={10} as="h2">Témoignages</Heading>
         </Center>
         <Grid templateColumns="repeat(12, 1fr)" templateRows="repeat(3, 1fr)" gap={30} spacing={10}>
-          <GridItem colSpan={4} rowSpan={3} p={5} shadow="md" borderWidth="1px" >
+          <GridItem colSpan={4} rowSpan={3}>
             <VStack>
               <Text textAlign="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</Text>
-              <Text>Alice DUPONT</Text>
+              <Text fontWeight="bold">Alice DUPONT</Text>
             </VStack>
           </GridItem>
-          <GridItem colSpan={4} rowSpan={3} p={5} shadow="md" borderWidth="1px">
+          <GridItem colSpan={4} rowSpan={3}>
             <VStack>
               <Text textAlign="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</Text>
-              <Text>Bob DUBOIS</Text>
+              <Text fontWeight="bold">Bob DUBOIS</Text>
             </VStack>
           </GridItem>
-          <GridItem colSpan={4} rowSpan={3} p={5} shadow="md" borderWidth="1px" >
+          <GridItem colSpan={4} rowSpan={3}>
             <VStack>
               <Center>
                 <Text textAlign="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</Text>
               </Center>
-              <Text>Charlie MARTIN</Text>
+              <Text fontWeight="bold">Charlie MARTIN</Text>
             </VStack>
           </GridItem>
         </Grid>

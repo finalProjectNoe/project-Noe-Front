@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Heading, Text, Button, HStack, VStack, } from '@chakra-ui/core'
+import { Heading, Text, Button, HStack, VStack, Box } from '@chakra-ui/core'
 import { Grid, GridItem, } from "@chakra-ui/react"
 import Nav from './Nav'
 import ChiffreCles from './ChiffresCles';
@@ -17,34 +17,35 @@ function Home() {
   return (
     <>
       <Nav />
-      <Grid
+      <Box p={20}>
+        <Grid
+          templateRows="repeat(1, 1fr)"
+          templateColumns="repeat(12, 1fr)"
+          gap={30}
+        >
+          <GridItem colSpan={6} p={10}>
+            <VStack>
+              <Heading textAlign="center" size="3xl" my={10} as='h1'>Référencez votre NOE</Heading>
 
-        templateRows="repeat(1, 1fr)"
-        templateColumns="repeat(12, 1fr)"
-        gap={30}
-      >
-        <GridItem colSpan={6} py={10} mx={5}>
-          <VStack>
-            <Heading textAlign="center" size="3xl" my={10} as='h1'>Référencez votre NOE</Heading>
-
-            <Text mb={10} textAlign="center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin mauris sit amet dolor commodo, non faucibus est feugiat. Proin sit amet tortor id turpis lobortis placerat ac ut libero. Quisque dapibus ac leo a volutpat. Maecenas fringilla mi augue, eget pellentesque orci vestibulum vel. Nullam suscipit velit sit amet nisl dignissim nec.
+              <Text mb={10} textAlign="center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin mauris sit amet dolor commodo, non faucibus est feugiat. Proin sit amet tortor id turpis lobortis placerat ac ut libero. Quisque dapibus ac leo a volutpat. Maecenas fringilla mi augue, eget pellentesque orci vestibulum vel. Nullam suscipit velit sit amet nisl dignissim nec.
             </Text>
 
-            <HStack spacing='24px'>
+              <HStack spacing='24px'>
 
-              <Button colorScheme="teal" textTransform='uppercase' variant="outline">
-                <Link to="/particulier">espace particulier</Link>
-              </Button>
+                <Button bg="brand.100" color="white" textTransform='uppercase'>
+                  <Link to="/particulier">espace particulier</Link>
+                </Button>
 
-              <Button colorScheme="teal" textTransform='uppercase' mx={5} variant="outline">
-                <Link to="/veterinaire">espace vétérinaire</Link>
-              </Button>
+                <Button colorScheme="teal" textTransform='uppercase' mx={5} >
+                  <Link to="/veterinaire">espace vétérinaire</Link>
+                </Button>
 
-            </HStack>
-          </VStack>
-        </GridItem>
-      </Grid>
+              </HStack>
+            </VStack>
+          </GridItem>
+        </Grid>
+      </Box>
       <ChiffreCles />
       <CommentçaMarche />
       <Temoignage />

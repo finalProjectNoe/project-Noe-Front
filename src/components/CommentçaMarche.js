@@ -6,29 +6,30 @@ function CommentçaMarche() {
 
   return (
     <>
-      <Box mx={5}>
+      <Box p={20}>
         <Center>
-          <Heading my={10} as="h2">Témoignages</Heading>
+          <Heading mb={10} as="h2">Comment ça marche ?</Heading>
         </Center>
         <Grid templateColumns="repeat(12, 1fr)" templateRows="repeat(3, 1fr)" gap={30} spacing={10}>
-          <GridItem colSpan={4} rowSpan={3} p={5} shadow="md" borderWidth="1px" >
-            <VStack>
-              <Text textAlign="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</Text>
-              <Text>Alice DUPONT</Text>
+          <GridItem colSpan={4} rowSpan={3} shadow="md" borderWidth="1px" >
+            <VStack p={10}>
+
+              <Text fontWeight="bold" fontSize="2xl">Inscription</Text>
+              <Text textAlign={"center"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</Text>
             </VStack>
           </GridItem>
           <GridItem colSpan={4} rowSpan={3} p={5} shadow="md" borderWidth="1px">
-            <VStack>
-              <Text textAlign="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</Text>
-              <Text>Bob DUBOIS</Text>
+            <VStack p={10}>
+              <Text fontWeight="bold" textAlign={"center"} fontSize="2xl">Attribution de l’animal par votre vétérinaire</Text>
+              <Text textAlign={"center"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</Text>
             </VStack>
           </GridItem>
           <GridItem colSpan={4} rowSpan={3} p={5} shadow="md" borderWidth="1px" >
-            <VStack>
+            <VStack p={10}>
+              <Text textAlign={"center"} fontWeight="bold" fontSize="2xl">Connexion à votre espace</Text>
               <Center>
-                <Text textAlign="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</Text>
+                <Text textAlign={"center"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</Text>
               </Center>
-              <Text>Charlie MARTIN</Text>
             </VStack>
           </GridItem>
         </Grid>

@@ -1,13 +1,8 @@
 import React from 'react'
-import { Center, Button, VStack, HStack, Input, Heading, FormControl, Box } from '@chakra-ui/core'
+import { Center, Button, Stack, Input, Heading, FormControl, Box } from '@chakra-ui/core'
 import { Grid, GridItem } from "@chakra-ui/react"
-import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem
-} from "@chakra-ui/react"
 import Nav from '../Nav'
+import Footer from '../Footer'
 
 
 function LoginVeterinaire() {
@@ -18,53 +13,54 @@ function LoginVeterinaire() {
       <Box my={10} mx={5}>
         <Grid m='auto' templateColumns="repeat(12, 1fr)" templateRows="repeat(3, 1fr)" gap={30}>
 
-          <GridItem colSpan={3} rowSpan={3}>
-            <VStack>
-              <Center>
-                <Heading mb={10}>Register</Heading>
-              </Center>
-              <HStack>
-                <FormControl isRequired>
-                  <HStack>
-                    <VStack>
+          <GridItem colStart={2} colSpan={4} rowSpan={3}>
 
-                      <Input variant="filled" id="fname" placeholder="Adresse ETH" />
+            <Center>
+              <Heading mb={10}>Inscription</Heading>
+            </Center>
 
-                      <Input variant="filled" id="fname" placeholder="Nom-Prénom" />
+            <FormControl isRequired>
+              <Stack spacing={8} >
 
-                      <Input variant="filled" id="fname" placeholder="Adresse" />
+                <Input variant="filled" id="fname" placeholder="Adresse ETH" />
 
-                      <Input variant="filled" id="fname" placeholder="Code postal" />
+                <Input variant="filled" id="fname" placeholder="Nom-Prénom" />
 
-                      <Input variant="filled" id="fname" placeholder="Ville" />
+                <Input variant="filled" id="fname" placeholder="Adresse" />
 
-                      <Menu>
-                        <MenuButton
-                          px={4}
-                          py={2}
-                          transition="all 0.2s"
-                          borderRadius="md"
-                          borderWidth="1px"
-                          _hover={{ bg: "gray.100" }}
-                          _expanded={{ bg: "red.200" }}
-                          _focus={{ outline: 0, boxShadow: "outline" }}
-                        >
-                          Diplome
-                        </MenuButton>
-                        <MenuList>
-                          <MenuItem>Open...</MenuItem>
-                        </MenuList>
-                      </Menu>
+                <Input variant="filled" id="fname" placeholder="Code postal" />
 
-                      <Button>Inscription</Button>
-                    </VStack>
-                  </HStack>
-                </FormControl >
-              </HStack >
-            </VStack >
+                <Input variant="filled" id="fname" placeholder="Ville" />
+
+                <Input variant="filled" id="fname" placeholder="Diplome" />
+
+                <Button textTransform='uppercase' colorScheme="teal">Inscription</Button>
+              </Stack>
+            </FormControl >
+
+          </GridItem>
+
+          <GridItem colStart={8} colSpan={4} rowSpan={3}>
+
+            <Center>
+              <Heading mb={10}>Connexion</Heading>
+            </Center>
+
+            <FormControl isRequired>
+              <Stack spacing={50} >
+
+                <Input variant="filled" id="fname" placeholder="Adresse ETH" />
+
+                <Input variant="filled" id="fname" placeholder="Nom-Prénom" />
+
+                <Button textTransform='uppercase' colorScheme="teal">Connexion</Button>
+              </Stack>
+            </FormControl >
+
           </GridItem>
         </Grid>
       </Box>
+      <Footer />
     </>
   )
 }
