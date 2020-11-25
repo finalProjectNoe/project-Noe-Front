@@ -46,5 +46,17 @@
   "main": "index.js",
   "repository": "https://github.com/finalProjectNoe/project-Noe-Front.git",
   "author": "finalProjectNoe <walhplay@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-mocha-no-only": "^1.1.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "prettier": "^2.2.0",
+    "prettier-plugin-solidity": "^1.0.0-beta.1",
+    "solhint": "^3.3.2"
+  }
 }
