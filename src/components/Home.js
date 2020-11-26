@@ -38,7 +38,7 @@ function Home() {
                   <Link to="/particulier">espace particulier</Link>
                 </Button>
 
-                <Button bg="brand.100" _hover="brand.900" color="white" textTransform='uppercase' mx={5} >
+                <Button bg="brand.100" $_hover="brand.900" color="white" textTransform='uppercase' mx={5} >
                   <Link to="/veterinaire">espace vétérinaire</Link>
                 </Button>
 

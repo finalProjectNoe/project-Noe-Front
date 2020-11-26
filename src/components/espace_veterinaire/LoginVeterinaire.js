@@ -1,6 +1,7 @@
 import React from 'react'
 import { Center, Button, Stack, Input, Heading, FormControl, Box } from '@chakra-ui/core'
 import { Grid, GridItem } from "@chakra-ui/react"
+import { Link } from 'react-router-dom';
 import Nav from '../Nav'
 import Footer from '../Footer'
 
@@ -53,7 +54,7 @@ function LoginVeterinaire() {
 
                 <Input variant="filled" id="fname" placeholder="Nom-Prénom" />
 
-                <Button textTransform='uppercase' colorScheme="teal">Connexion</Button>
+                <Button textTransform='uppercase' colorScheme="teal"><Link to="/profil_veterinaire">Connexion</Link></Button>
               </Stack>
             </FormControl >
 

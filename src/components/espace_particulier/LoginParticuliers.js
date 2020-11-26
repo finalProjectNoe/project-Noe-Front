@@ -1,5 +1,6 @@
 import { React, useEffect, useState } from 'react'
-import { Center, Button, Stack, Input, Heading, FormControl, Box } from '@chakra-ui/core'
+import { Center, Button, Stack, Input, Heading, FormControl, Box, } from '@chakra-ui/core'
+import { Link } from 'react-router-dom';
 import { Grid, GridItem } from "@chakra-ui/react"
 import Nav from '../Nav'
 import Footer from '../Footer'
@@ -81,8 +82,9 @@ function LoginParticulier() {
 
                 <Input variant="filled" id="fname" placeholder="Nom-Prénom" />
 
-                <Button onClick={handleOnClickConnectionMember} textTransform='uppercase' colorScheme="teal">Connexion</Button>
-
+                <Button onClick={handleOnClickConnectionMember} textTransform='uppercase' colorScheme="teal">
+                  <Link to="/profil_particulier">Connexion</Link>
+                </Button>
               </Stack>
             </FormControl >
 

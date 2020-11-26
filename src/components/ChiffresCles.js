@@ -1,6 +1,6 @@
 import React from 'react'
 import { Heading, Text, Box, VStack, Center } from '@chakra-ui/core'
-import { Grid, GridItem, } from "@chakra-ui/react"
+import { Grid, GridItem, Divider } from "@chakra-ui/react"
 
 function ChiffreCles() {
 
@@ -21,13 +21,13 @@ function ChiffreCles() {
             </VStack>
           </GridItem>
           <GridItem colSpan={3} rowSpan={3}>
-            <VStack>
+            <VStack h='110px' borderLeft="1px solid">
               <Text fontWeight="bold" fontSize="3xl">437</Text>
               <Text>Particuliers nous ont fait confiance</Text>
             </VStack>
           </GridItem>
           <GridItem colSpan={3} rowSpan={3} >
-            <VStack>
+            <VStack h='110px' borderLeft="1px solid">
               <Text fontWeight="bold" fontSize="3xl">1850</Text>
               <Center>
                 <Text textAlign="center">Animaux retrouvés grâce à notre plateforme</Text>
