@@ -1,6 +1,6 @@
 import React from 'react'
 import { Heading, Text, Box, VStack, Center } from '@chakra-ui/core'
-import { Grid, GridItem, Divider } from "@chakra-ui/react"
+import { Grid, GridItem } from "@chakra-ui/react"
 
 function ChiffreCles() {
 
