@@ -6,7 +6,7 @@ import Logo from '../assets/logo.png'
 function Footer() {
   return (
 
-    <Box py={50} bg="teal.500" fontFamily="Montserrat" >
+    <Box py={10} bg="teal.500" fontFamily="Montserrat" >
       <Center>
 
         <Text>Dev by Streed, Micka, Nicolas, Théo</Text>

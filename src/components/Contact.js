@@ -1,7 +1,7 @@
 import React from 'react'
-import { Heading, Text, Button, HStack, VStack, Center, Box } from '@chakra-ui/core'
-import { Input, FormControl } from '@chakra-ui/core'
-import { Grid, GridItem, Textarea } from "@chakra-ui/react"
+import { Heading, Text, Button, HStack, VStack, Center, Box, SimpleGrid, Textarea, Input, FormControl } from '@chakra-ui/core'
+
+
 
 
 
@@ -11,30 +11,23 @@ function Contact() {
 
   return (
     <>
-      <Box p={20} fontFamily="Montserrat">
+      <Box py={20} fontFamily="Montserrat">
         <Center>
           <Heading fontFamily="Montserrat" mb={10}>Contact</Heading>
         </Center>
         <VStack>
           <HStack>
-            <Grid
+            <SimpleGrid columns={1} spacing="20px" fontFamily="Montserrat">
 
-              templateRows="repeat(1, 1fr)"
-              templateColumns="repeat(12, 1fr)"
-              gap={30}
-            >
-              <GridItem colStart={5} colSpan={4}>
-                <FormControl>
-                  <Input type="email" placeholder="Email" />
-                </FormControl >
-                <Textarea rows="5" cols="50" borderWidth="1px" my={10} placeholder="Message" variant="filled" id="fname" />
-                <Center>
-                  <Button my={10} colorScheme="teal" textTransform='uppercase'>Envoyer</Button>
-                </Center>
-                <Text textAlign="center" mb={10}>info@form.com</Text>
-
-              </GridItem>
-            </Grid>
+              <FormControl>
+                <Input type="email" placeholder="Email" variant="filled" />
+              </FormControl >
+              <Textarea rows="5" cols="50" borderWidth="1px" my={5} placeholder="Message" variant="filled" />
+              <Center>
+                <Button my={5} colorScheme="teal" textTransform='uppercase'>Envoyer</Button>
+              </Center>
+              <Text textAlign="center" mb={5}>info@form.com</Text>
+            </SimpleGrid>
           </HStack >
         </VStack >
       </Box>

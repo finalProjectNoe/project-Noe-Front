@@ -1,7 +1,6 @@
 import { React, useEffect, useState } from 'react'
-import { Center, Button, Stack, Input, Heading, FormControl, Box, } from '@chakra-ui/core'
+import { Center, Button, Stack, Input, Heading, FormControl, Box, SimpleGrid, VStack } from '@chakra-ui/core'
 import { Link } from 'react-router-dom';
-import { Grid, GridItem } from "@chakra-ui/react"
 import Nav from '../Nav'
 import Footer from '../Footer'
 import { ethers } from 'ethers'
@@ -40,55 +39,57 @@ function LoginParticulier() {
   return (
     <>
       <Nav />
-      <Box my={10} mx={5}>
-        <Grid m='auto' templateColumns="repeat(12, 1fr)" templateRows="repeat(3, 1fr)" gap={30}>
+      <VStack py={20}>
+        <Box my={10}>
+          <SimpleGrid columns={[1, 1, 2]} spacing="40px">
 
-          <GridItem borderWidth="1px" p={50} borderRadius={5} colStart={2} colSpan={4} rowSpan={3}>
+            <Box borderWidth="1px" p={50} borderRadius={5}>
 
-            <Center>
-              <Heading mb={10}>Inscription</Heading>
-            </Center>
+              <Center>
+                <Heading mb={10}>Inscription</Heading>
+              </Center>
 
-            <FormControl isRequired>
-              <Stack spacing={8} >
+              <FormControl isRequired>
+                <Stack spacing={8} >
 
-                <Input variant="filled" id="fname" placeholder="Adresse ETH" />
+                  <Input variant="filled" id="fname" placeholder="Adresse ETH" />
 
-                <Input variant="filled" id="fname" placeholder="Nom" />
+                  <Input variant="filled" id="fname" placeholder="Nom" />
 
-                <Input variant="filled" id="fname" placeholder="Téléphone" />
+                  <Input variant="filled" id="fname" placeholder="Téléphone" />
 
 
 
-                <Button onClick={handleOnClickCreateMember} textTransform='uppercase' colorScheme="teal">Inscription</Button>
+                  <Button onClick={handleOnClickCreateMember} textTransform='uppercase' colorScheme="teal">Inscription</Button>
 
-              </Stack>
-            </FormControl >
+                </Stack>
+              </FormControl >
 
-          </GridItem>
+            </Box>
 
-          <GridItem borderWidth="1px" p={50} borderRadius={5} colStart={8} colSpan={4} rowSpan={3}>
+            <Box borderWidth="1px" p={50} borderRadius={5}>
 
-            <Center>
-              <Heading mb={10}>Connexion</Heading>
-            </Center>
+              <Center>
+                <Heading mb={10}>Connexion</Heading>
+              </Center>
 
-            <FormControl isRequired>
-              <Stack spacing={50} >
+              <FormControl isRequired>
+                <Stack spacing={50} >
 
-                <Input variant="filled" id="fname" placeholder="Adresse ETH" />
+                  <Input variant="filled" id="fname" placeholder="Adresse ETH" />
 
-                <Input variant="filled" id="fname" placeholder="Nom" />
+                  <Input variant="filled" id="fname" placeholder="Nom" />
 
-                <Button onClick={handleOnClickConnectionMember} textTransform='uppercase' colorScheme="teal">
-                  <Link to="/profil_particulier">Connexion</Link>
-                </Button>
-              </Stack>
-            </FormControl >
+                  <Button onClick={handleOnClickConnectionMember} textTransform='uppercase' colorScheme="teal">
+                    <Link to="/profil_particulier">Connexion</Link>
+                  </Button>
+                </Stack>
+              </FormControl >
 
-          </GridItem>
-        </Grid>
-      </Box>
+            </Box>
+          </SimpleGrid>
+        </Box>
+      </VStack>
       <Footer />
     </>
   )

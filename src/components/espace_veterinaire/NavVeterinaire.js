@@ -1,6 +1,5 @@
 import React from 'react'
-import { Button, Box } from '@chakra-ui/core'
-import { Grid, GridItem, Divider, Input, FormControl, Image } from "@chakra-ui/react"
+import { Button, Box, Divider, Input, FormControl, Image, Flex, Center, Spacer } from '@chakra-ui/core'
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png'
 
@@ -8,33 +7,33 @@ function NavVeteinaire() {
 
   return (
     <>
-      <Box py={3} px={150} fontFamily="Montserrat">
-        <Grid m='auto' templateColumns="repeat(12, 1fr)" gap={6}>
-
-          <GridItem>
-            <Link to="/profil_veterinaire">
-              <Image boxSize="100px" objectFit="cover" src={Logo} />
-            </Link>
-          </GridItem>
-
-          <GridItem colStart={3}  >
-            <FormControl>
-              <Input p={7} type="search" variant="outline" placeholder="Recherche animaux" />
+      <Flex fontFamily="Montserrat">
+        <Box py={3}>
+          <Link to="/profil_veterinaire">
+            <Image boxSize="100px" objectFit="cover" src={Logo} />
+          </Link>
+        </Box>
+        <Spacer />
+        <Box py={3}>
+          <FormControl>
+            <Input p={7} type="search" variant="outline" placeholder="Recherche animaux" />
+            <Center>
               <Button colorScheme="teal" textTransform='uppercase'>
                 Recherche
             </Button>
-            </FormControl>
-          </GridItem>
-          <GridItem colStart={10} colSpan={3} textTransform='uppercase' py={8} ml='auto'>
-            <Button mr={10} colorScheme="teal" textTransform='uppercase' variant="link">
-              <Link to="/profil_veterinaire">Mon espace</Link>
-            </Button>
-            <Button colorScheme="teal" textTransform='uppercase' variant="link">
-              <Link to="/">Deconnexion</Link>
-            </Button>
-          </GridItem>
-        </Grid>
-      </Box>
+            </Center>
+          </FormControl>
+        </Box>
+        <Spacer />
+        <Box py={10}>
+          <Button mr={5} colorScheme="teal" textTransform='uppercase' variant="link">
+            <Link to="/profil_veterinaire">Mon espace</Link>
+          </Button>
+          <Button mr={5} colorScheme="teal" textTransform='uppercase' variant="link">
+            <Link to="/">Deconnexion</Link>
+          </Button>
+        </Box>
+      </Flex>
       <Divider borderWidth="1px" />
     </>
   )
