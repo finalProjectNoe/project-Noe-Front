@@ -90,7 +90,7 @@ function LoginParticulier() {
 
                 <Input variant="filled" id="fname" placeholder="Adresse ETH" />
 
-                <Input variant="filled" id="fname" placeholder="Nom-Prénom" />
+                <Input variant="filled" id="fname" placeholder="Nom" />
 
                 <Button textTransform='uppercase' colorScheme="teal" onClick={handleOnClickConnectionMember}>Connexion</Button>
               </Stack>

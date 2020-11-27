@@ -13,7 +13,7 @@ const theme = extendTheme({
       100: '#246A73',
       900: '#368F8B'
     },
-    beige: {
+    bad: {
       100: '#F3DFC1',
     },
     purple: {
