@@ -54,13 +54,11 @@ function LoginParticulier() {
 
                 <Input variant="filled" id="fname" placeholder="Adresse ETH" />
 
-                <Input variant="filled" id="fname" placeholder="Nom-Prénom" />
+                <Input variant="filled" id="fname" placeholder="Nom" />
 
-                <Input variant="filled" id="fname" placeholder="Adresse" />
+                <Input variant="filled" id="fname" placeholder="Téléphone" />
 
-                <Input variant="filled" id="fname" placeholder="Code postal" />
 
-                <Input variant="filled" id="fname" placeholder="Ville" />
 
                 <Button onClick={handleOnClickCreateMember} textTransform='uppercase' colorScheme="teal">Inscription</Button>
 
@@ -80,7 +78,7 @@ function LoginParticulier() {
 
                 <Input variant="filled" id="fname" placeholder="Adresse ETH" />
 
-                <Input variant="filled" id="fname" placeholder="Nom-Prénom" />
+                <Input variant="filled" id="fname" placeholder="Nom" />
 
                 <Button onClick={handleOnClickConnectionMember} textTransform='uppercase' colorScheme="teal">
                   <Link to="/profil_particulier">Connexion</Link>

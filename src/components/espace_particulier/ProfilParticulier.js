@@ -3,8 +3,8 @@ import { Heading, Text, Box, VStack } from '@chakra-ui/core'
 import { Grid, GridItem, Image } from "@chakra-ui/react"
 import NavParticulier from './NavParticulier'
 import Footer from '../Footer'
-import Man from '../../assets/man.png'
-import cat_profil from '../../assets/cat_profil.png'
+import Man from '../../assets/man.svg'
+import cat_profil from '../../assets/cat_profil.svg'
 
 function ProfilParticulier() {
 
@@ -27,19 +27,13 @@ function ProfilParticulier() {
                 <GridItem p={21} colStart={4} colSpan={1} rowSpan={2} >
                   <VStack>
                     <Text>Nom</Text>
-                    <Text >Adresse</Text>
+                    <Text >Téléphone</Text>
                   </VStack>
                 </GridItem>
-                <GridItem p={21} colStart={6} colSpan={2} rowSpan={2}>
-                  <VStack>
-                    <Text>Prénom</Text>
-                    <Text>Code postal</Text>
-                  </VStack>
-                </GridItem>
+
                 <GridItem p={21} colStart={8} colSpan={2} rowSpan={2}>
                   <VStack>
                     <Text>Adresse ETH</Text>
-                    <Text>Ville</Text>
                   </VStack>
                 </GridItem>
               </Grid>

@@ -3,7 +3,7 @@ import { Heading, Text, Box, VStack } from '@chakra-ui/core'
 import { Grid, GridItem, Image } from "@chakra-ui/react"
 import Footer from '../Footer'
 import NavVeteinaire from './NavVeterinaire'
-import Woman from '../../assets/woman.png'
+import Woman from '../../assets/woman.svg'
 
 function Profilveterinaire() {
 
@@ -24,26 +24,15 @@ function Profilveterinaire() {
                     <Image borderRadius="full" boxSize="100px" objectFit="cover" src={Woman} />
                   </VStack>
                 </GridItem>
-                <GridItem p={21} colStart={4} colSpan={1} rowSpan={2} >
+                <GridItem p={21} colStart={5} colSpan={1} rowSpan={2} >
                   <VStack>
                     <Text>Nom</Text>
-                    <Text >Adresse</Text>
-                  </VStack>
-                </GridItem>
-                <GridItem p={21} colStart={6} colSpan={2} rowSpan={2}>
-                  <VStack>
-                    <Text>Prénom</Text>
-                    <Text>Code postal</Text>
+                    <Text >Téléphone</Text>
                   </VStack>
                 </GridItem>
                 <GridItem p={21} colStart={8} colSpan={2} rowSpan={2}>
                   <VStack>
                     <Text>Adresse ETH</Text>
-                    <Text>Ville</Text>
-                  </VStack>
-                </GridItem>
-                <GridItem p={21} colStart={10} colSpan={2} rowSpan={2}>
-                  <VStack>
                     <Text>Diplome</Text>
                   </VStack>
                 </GridItem>

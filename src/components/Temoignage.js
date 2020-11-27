@@ -1,14 +1,14 @@
 import React from 'react'
-import { Heading, Text, Box, VStack, Center } from '@chakra-ui/core'
+import { Heading, Text, VStack, Center, Box } from '@chakra-ui/core'
 import { Grid, GridItem, Image } from "@chakra-ui/react"
-import Man from '../assets/man.png'
-import Woman from '../assets/woman_1.png'
+import Man from '../assets/man.svg'
+import Woman from '../assets/woman_1.svg'
 
 function Temoignage() {
 
   return (
     <>
-      <Box p={20} bg="beige.100" fontFamily="Montserrat">
+      <Box p={20} bg="bad.100" fontFamily="Montserrat">
         <Center>
           <Heading fontFamily="Montserrat" mb={10} as="h2">Témoignages</Heading>
         </Center>
