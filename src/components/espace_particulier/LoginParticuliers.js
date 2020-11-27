@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import { Center, Button, Stack, Input, Heading, FormControl, Box } from '@chakra-ui/core'
+import { React, useEffect, useState } from 'react'
+import { Center, Button, Stack, Input, Heading, FormControl, Box, } from '@chakra-ui/core'
+import { Link } from 'react-router-dom';
 import { Grid, GridItem } from "@chakra-ui/react"
 import Nav from '../Nav'
 import Footer from '../Footer'
@@ -16,6 +17,7 @@ function LoginParticulier() {
   const [web3State, login] = useState(Web3Context)
   const [noe, setNoe] = useState(null)
   const [inputValue, setInputValue] = useState(0)
+
   // const [inputValueAdressMember, setInputValueAdressMember] = useState(null)
   const [inputValueNameMember, setInputValueNameMember] = useState(null)
   const [inputValuePhoneMember, setInputValuePhoneMember] = useState(null)
@@ -23,6 +25,7 @@ function LoginParticulier() {
   const handleOnClickCreateMember = async () => {
     const CMTX1 = await noe.createMember(inputValueNameMember, inputValuePhoneMember)
   }
+
   const handleOnClickConnectionMember = async () => {
     const CMTX2 = await noe.connectionMember(inputValue)
   }
@@ -45,7 +48,7 @@ function LoginParticulier() {
       <Box my={10} mx={5}>
         <Grid m='auto' templateColumns="repeat(12, 1fr)" templateRows="repeat(3, 1fr)" gap={30}>
 
-          <GridItem colStart={2} colSpan={4} rowSpan={3}>
+          <GridItem borderWidth="1px" p={50} borderRadius={5} colStart={2} colSpan={4} rowSpan={3}>
 
             <Center>
               <Heading mb={10}>Inscription</Heading>
@@ -69,12 +72,14 @@ function LoginParticulier() {
 
                 <Button textTransform='uppercase' colorScheme="teal" onClick={handleOnClickCreateMember}>Inscription</Button>
 
+                <Button onClick={handleOnClickCreateMember} textTransform='uppercase' colorScheme="teal">Inscription</Button>
+
               </Stack>
             </FormControl >
 
           </GridItem>
 
-          <GridItem colStart={8} colSpan={4} rowSpan={3}>
+          <GridItem borderWidth="1px" p={50} borderRadius={5} colStart={8} colSpan={4} rowSpan={3}>
 
             <Center>
               <Heading mb={10}>Connexion</Heading>

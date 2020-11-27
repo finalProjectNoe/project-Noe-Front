@@ -11,9 +11,9 @@ function Contact() {
 
   return (
     <>
-      <Box p={20}>
+      <Box p={20} fontFamily="Montserrat">
         <Center>
-          <Heading mb={10}>Contact</Heading>
+          <Heading fontFamily="Montserrat" mb={10}>Contact</Heading>
         </Center>
         <VStack>
           <HStack>

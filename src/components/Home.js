@@ -11,13 +11,14 @@ import Footer from './Footer'
 
 
 
+
 function Home() {
 
 
   return (
     <>
       <Nav />
-      <Box p={20}>
+      <Box p={20} fontFamily="Montserrat">
         <Grid
           templateRows="repeat(1, 1fr)"
           templateColumns="repeat(12, 1fr)"
@@ -25,7 +26,7 @@ function Home() {
         >
           <GridItem colSpan={6} p={10}>
             <VStack>
-              <Heading textAlign="center" size="3xl" my={10} as='h1'>Référencez votre NOE</Heading>
+              <Heading fontFamily="Montserrat" textAlign="center" size="3xl" my={10} as='h1'>Référencez votre NOE</Heading>
 
               <Text mb={10} textAlign="center">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin mauris sit amet dolor commodo, non faucibus est feugiat. Proin sit amet tortor id turpis lobortis placerat ac ut libero. Quisque dapibus ac leo a volutpat. Maecenas fringilla mi augue, eget pellentesque orci vestibulum vel. Nullam suscipit velit sit amet nisl dignissim nec.
@@ -33,11 +34,11 @@ function Home() {
 
               <HStack spacing='24px'>
 
-                <Button bg="brand.100" color="white" textTransform='uppercase'>
+                <Button colorScheme="teal" textTransform='uppercase'>
                   <Link to="/particulier">espace particulier</Link>
                 </Button>
 
-                <Button colorScheme="teal" textTransform='uppercase' mx={5} >
+                <Button bg="brand.100" $_hover="brand.900" color="white" textTransform='uppercase' mx={5} >
                   <Link to="/veterinaire">espace vétérinaire</Link>
                 </Button>
 

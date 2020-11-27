@@ -45,8 +45,8 @@ export const chainIdtoName = (chainId) => {
   }
 }
 
-export const isConnected = () => {}
+export const isConnected = () => { }
 
-export const connect = () => {}
+export const connect = () => { }
 
-export const disconnect = () => {}
+export const disconnect = () => { }
