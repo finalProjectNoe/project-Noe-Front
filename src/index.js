@@ -4,6 +4,7 @@ import reportWebVitals from './reportWebVitals'
 import { ChakraProvider } from '@chakra-ui/core'
 import 'focus-visible/dist/focus-visible'
 import App from './App'
+import { Web3Provider } from './hooks/useWeb3'
 import { extendTheme, GlobalStyle } from "@chakra-ui/react"
 
 const theme = extendTheme({
