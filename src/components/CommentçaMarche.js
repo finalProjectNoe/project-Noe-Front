@@ -1,9 +1,9 @@
 import React from 'react'
 import { Heading, Text, Box, VStack, Center } from '@chakra-ui/core'
 import { Grid, GridItem, Image } from "@chakra-ui/react"
-import Dog from '../assets/dog.png'
-import Cat from '../assets/cat.png'
-import Ferret from '../assets/ferret.png'
+import Dog from '../assets/dog.svg'
+import Cat from '../assets/cat.svg'
+import Ferret from '../assets/ferret.svg'
 
 function CommentçaMarche() {
 

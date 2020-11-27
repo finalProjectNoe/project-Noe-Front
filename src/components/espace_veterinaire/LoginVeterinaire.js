@@ -25,13 +25,9 @@ function LoginVeterinaire() {
 
                 <Input variant="filled" id="fname" placeholder="Adresse ETH" />
 
-                <Input variant="filled" id="fname" placeholder="Nom-Prénom" />
+                <Input variant="filled" id="fname" placeholder="Nom" />
 
-                <Input variant="filled" id="fname" placeholder="Adresse" />
-
-                <Input variant="filled" id="fname" placeholder="Code postal" />
-
-                <Input variant="filled" id="fname" placeholder="Ville" />
+                <Input variant="filled" id="fname" placeholder="Téléphone" />
 
                 <Input variant="filled" id="fname" placeholder="Diplome" />
 
@@ -52,7 +48,7 @@ function LoginVeterinaire() {
 
                 <Input variant="filled" id="fname" placeholder="Adresse ETH" />
 
-                <Input variant="filled" id="fname" placeholder="Nom-Prénom" />
+                <Input variant="filled" id="fname" placeholder="Nom" />
 
                 <Button textTransform='uppercase' colorScheme="teal"><Link to="/profil_veterinaire">Connexion</Link></Button>
               </Stack>
