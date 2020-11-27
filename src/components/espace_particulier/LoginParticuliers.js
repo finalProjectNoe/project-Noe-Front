@@ -1,11 +1,43 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Center, Button, Stack, Input, Heading, FormControl, Box } from '@chakra-ui/core'
 import { Grid, GridItem } from "@chakra-ui/react"
 import Nav from '../Nav'
 import Footer from '../Footer'
+import { ethers } from 'ethers'
+import { Web3Context } from '../../hooks/useWeb3'
+import {
+  Noe_address,
+  Noe_abi,
+} from '../../contracts/NoeContract'
 
 
 function LoginParticulier() {
+
+  const [web3State, login] = useState(Web3Context)
+  const [noe, setNoe] = useState(null)
+  const [inputValue, setInputValue] = useState(0)
+  // const [inputValueAdressMember, setInputValueAdressMember] = useState(null)
+  const [inputValueNameMember, setInputValueNameMember] = useState(null)
+  const [inputValuePhoneMember, setInputValuePhoneMember] = useState(null)
+
+  const handleOnClickCreateMember = async () => {
+    const CMTX1 = await noe.createMember(inputValueNameMember, inputValuePhoneMember)
+  }
+  const handleOnClickConnectionMember = async () => {
+    const CMTX2 = await noe.connectionMember(inputValue)
+  }
+
+  useEffect(() => {
+    if (web3State.signer !== null) {
+      setNoe(
+        new ethers.Contract(
+          Noe_address,
+          Noe_abi,
+          web3State.signer
+        )
+      )
+    }
+  }, [web3State.signer])
 
   return (
     <>
@@ -21,18 +53,22 @@ function LoginParticulier() {
 
             <FormControl isRequired>
               <Stack spacing={8} >
+{/* 
+                <Input value={inputValueAdressMember} onChange={(e) => {setInputValueAdressMember(e.currentTarget.value)}}
+                variant="filled" id="fname" placeholder="Adresse ETH" /> */}
 
-                <Input variant="filled" id="fname" placeholder="Adresse ETH" />
+                <Input value={inputValueNameMember} onChange={(e) => {setInputValueNameMember(e.currentTarget.value)}} 
+                variant="filled" id="fname" placeholder="Nom" />
 
-                <Input variant="filled" id="fname" placeholder="Nom-Prénom" />
+                <Input value={inputValuePhoneMember} onChange={(e) => {setInputValuePhoneMember(e.currentTarget.value)}} 
+                variant="filled" id="fname" placeholder="Mobile" />
 
-                <Input variant="filled" id="fname" placeholder="Adresse" />
+                {/* <Input variant="filled" id="fname" placeholder="Code postal" />
 
-                <Input variant="filled" id="fname" placeholder="Code postal" />
+                <Input variant="filled" id="fname" placeholder="Ville" /> */}
 
-                <Input variant="filled" id="fname" placeholder="Ville" />
+                <Button textTransform='uppercase' colorScheme="teal" onClick={handleOnClickCreateMember}>Inscription</Button>
 
-                <Button textTransform='uppercase' colorScheme="teal">Inscription</Button>
               </Stack>
             </FormControl >
 
@@ -51,7 +87,7 @@ function LoginParticulier() {
 
                 <Input variant="filled" id="fname" placeholder="Nom-Prénom" />
 
-                <Button textTransform='uppercase' colorScheme="teal">Connexion</Button>
+                <Button textTransform='uppercase' colorScheme="teal" onClick={handleOnClickConnectionMember}>Connexion</Button>
               </Stack>
             </FormControl >
 

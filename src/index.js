@@ -4,6 +4,7 @@ import reportWebVitals from './reportWebVitals'
 import { ChakraProvider } from '@chakra-ui/core'
 import 'focus-visible/dist/focus-visible'
 import App from './App'
+import { Web3Provider } from './hooks/useWeb3'
 import { extendTheme } from "@chakra-ui/react"
 
 const theme = extendTheme({
@@ -28,7 +29,9 @@ const theme = extendTheme({
 ReactDOM.render(
   <React.StrictMode>
     <ChakraProvider theme={theme} resetCSS={true}>
-      <App />
+    <Web3Provider>
+        <App />
+      </Web3Provider>
     </ChakraProvider>
   </React.StrictMode>,
   document.getElementById('root')
