@@ -61,7 +61,7 @@ function ProfilParticulier() {
 
           <Box>
             <VStack>
-              <Text>Date de naissance</Text>
+              <Text textAlign="center">Date de naissance</Text>
               <Text>Vaccin</Text>
             </VStack>
           </Box>

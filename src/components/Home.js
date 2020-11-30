@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Heading, Text, Button, HStack, VStack, Box, SimpleGrid } from '@chakra-ui/core'
+import { Heading, Text, Button, HStack, VStack, Box } from '@chakra-ui/core'
 import Nav from './Nav'
 import ChiffreCles from './ChiffresCles';
 import CommentçaMarche from './CommentçaMarche';
@@ -31,7 +31,10 @@ function Home() {
               <Link to="/particulier">espace particulier</Link>
             </Button>
 
-            <Button bg="brand.100" $_hover="brand.900" color="white" textTransform='uppercase' mx={5} >
+            <Button _hover={{
+              bg: "teal.500",
+              color: "white",
+            }} bg="brand.100" color="white" textTransform='uppercase' mx={5} >
               <Link to="/veterinaire">espace vétérinaire</Link>
             </Button>
 

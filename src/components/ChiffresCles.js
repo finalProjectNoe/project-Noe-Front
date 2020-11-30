@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Text, Center, Box, SimpleGrid, VStack, Divider } from '@chakra-ui/core'
+import { Heading, Text, Center, Box, SimpleGrid, VStack } from '@chakra-ui/core'
 
 
 function ChiffreCles() {
