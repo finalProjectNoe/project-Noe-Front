@@ -16,9 +16,12 @@ function LoginParticulier() {
   const [web3State, login] = useState(Web3Context)
   const [noe, setNoe] = useState(null)
   const [inputValue, setInputValue] = useState(0)
+  // const [inputValueAdressMember, setInputValueAdressMember] = useState(null)
+  const [inputValueNameMember, setInputValueNameMember] = useState(null)
+  const [inputValuePhoneMember, setInputValuePhoneMember] = useState(null)
 
   const handleOnClickCreateMember = async () => {
-    const CMTX1 = await noe.createMember(inputValue)
+    const CMTX1 = await noe.createMember(inputValueNameMember, inputValuePhoneMember)
   }
   const handleOnClickConnectionMember = async () => {
     const CMTX2 = await noe.connectionMember(inputValue)
@@ -52,9 +55,11 @@ function LoginParticulier() {
               <FormControl isRequired>
                 <Stack spacing={8} >
 
-                  <Input variant="filled" id="fname" placeholder="Adresse ETH" />
+                  <Input value={inputValueNameMember} onChange={(e) => { setInputValueNameMember(e.currentTarget.value) }}
+                    variant="filled" id="fname" placeholder="Nom" />
 
-                  <Input variant="filled" id="fname" placeholder="Nom" />
+                  <Input value={inputValuePhoneMember} onChange={(e) => { setInputValuePhoneMember(e.currentTarget.value) }}
+                    variant="filled" id="fname" placeholder="Mobile" />
 
                   <Input variant="filled" id="fname" placeholder="Téléphone" />
 

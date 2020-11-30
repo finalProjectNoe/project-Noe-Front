@@ -6,7 +6,7 @@ function ChiffreCles() {
 
   return (
     <Box fontFamily="Montserrat">
-      <SimpleGrid columns={[1, 3, 4]} spacing="40px" p={20} bg="bad.100">
+      <SimpleGrid columns={[1, 1, 4]} spacing="40px" p={20} bg="bad.100">
         <Box>
           <Center>
             <Heading fontFamily="Montserrat" as="h2">Chiffres-clés</Heading>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Heading, Text, Box, VStack, SimpleGrid, Image, Center } from '@chakra-ui/core'
 import Footer from '../Footer'
 import NavVeteinaire from './NavVeterinaire'
-import Woman from '../../assets/woman.svg'
+import Woman from '../../assets/girl.svg'
 
 function Profilveterinaire() {
 
