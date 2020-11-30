@@ -30,7 +30,9 @@ ReactDOM.render(
   <React.StrictMode>
     <ChakraProvider theme={theme} resetCSS={true}>
       <GlobalStyle style={theme} />
-      <App />
+      <Web3Provider>
+        <App />
+      </Web3Provider>
     </ChakraProvider>
   </React.StrictMode>,
   document.getElementById('root')

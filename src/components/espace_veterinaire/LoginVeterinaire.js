@@ -72,8 +72,6 @@ function LoginVeterinaire() {
                     value={inputValuePhoneNumber} onChange={(e) => { setInputValuePhoneNumber(e.currentTarget.value) }}
                     variant="filled" id="fname" placeholder="Mobile" />
 
-                  <Input variant="filled" id="fname" placeholder="Diplome" />
-
                   <Button textTransform='uppercase' colorScheme="teal" onClick={handleOnClickCreateVeterinary}>Inscription</Button>
                 </Stack>
               </FormControl >
