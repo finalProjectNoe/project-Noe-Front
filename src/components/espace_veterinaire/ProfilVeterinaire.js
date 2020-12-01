@@ -14,7 +14,7 @@ function Profilveterinaire() {
         <Heading fontFamily="Montserrat" pt={10} as="h2">Mon espace</Heading>
       </Center>
       <Box p={20} fontFamily="Montserrat" mb={150}>
-        <SimpleGrid columns={[1, 2, 3]} spacing="40px" p={20} fontFamily="Montserrat" borderWidth="1px">
+        <SimpleGrid columns={[1, 1, 4]} spacing="40px" p={20} fontFamily="Montserrat" borderWidth="1px">
 
           <Box>
             <VStack>
