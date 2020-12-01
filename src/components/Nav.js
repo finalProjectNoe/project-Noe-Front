@@ -1,65 +1,101 @@
 import React, { useContext } from 'react'
-import { Button, Box, Flex, Divider, Image, Spacer, Portal } from '@chakra-ui/core'
-import { } from "@chakra-ui/react"
+import { Button, Box, Flex, Divider, Image, Spacer, Input, FormControl, Center, SimpleGrid, InputGroup } from '@chakra-ui/core'
 import { Link } from 'react-router-dom';
 import Logo from '../assets/logo.png'
-import Burger from '../assets/hamburger.svg'
+import Burger from '../assets/menu.svg'
+import Loupe from '../assets/loupe.svg'
 //import { ethers } from 'ethers'
 import { Web3Context } from '../hooks/useWeb3'
 import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerBody,
+  DrawerCloseButton,
+  useDisclosure,
 } from "@chakra-ui/core"
+
+
 
 
 function Nav() {
 
   const [web3State, login] = useContext(Web3Context)
 
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const btnRef = React.useRef()
+
+
   return (
     <>
       <Flex fontFamily="Montserrat">
         <Box py={3}>
-
           <Link to="/">
             <Image boxSize="100px" objectFit="cover" src={Logo} />
           </Link>
         </Box>
         <Spacer />
-        <Menu >
-          <MenuButton size="sm" py={10} mr={10} boxSize="50px">
-            <Image src={Burger} />
-          </MenuButton>
-          <Portal>
-            <MenuList>
-              <Box py={10}>
-                <MenuItem>
-                  {web3State.is_logged ? '' : ''}
-                  {!web3State.is_logged && (
-                    <>
-                      <Button _hover={{
-                        bg: "teal.500",
-                        color: "white",
-                      }} bg="brand.100" color="white" textTransform='uppercase' mr={5} onClick={login}>Start</Button>
-                    </>
-                  )}
-                </MenuItem>
-                <MenuItem>
-                  <Button colorScheme="teal" textTransform='uppercase' mr={5} variant="outline">
-                    <Link to="/particulier">espace particulier</Link>
-                  </Button>
-                </MenuItem>
-                <MenuItem>
-                  <Button colorScheme="teal" textTransform='uppercase' mr={5} variant="outline">
-                    <Link to="/veterinaire">espace vétérinaire</Link>
-                  </Button>
-                </MenuItem>
-              </Box>
-            </MenuList>
-          </Portal>
-        </Menu>
+        <Box my={10}>
+          {web3State.is_logged ? '' : ''}
+          {!web3State.is_logged && (
+            <>
+
+              <Button _hover={{
+                bg: "teal.500",
+                color: "white",
+              }} bg="brand.100" color="white" textTransform='uppercase' mr={5} onClick={login}>Start</Button>
+            </>
+          )}
+        </Box>
+        <Button variant="link" ref={btnRef} onClick={onOpen} size="sm" py={10} mr={10} >
+          <Image boxSize="25px" src={Burger} />
+        </Button>
+
+        <Drawer
+          isOpen={isOpen}
+          placement="right"
+          onClose={onClose}
+          finalFocusRef={btnRef}
+        >
+          <DrawerOverlay>
+            <DrawerContent>
+              <DrawerCloseButton />
+              <DrawerBody>
+                <Box py={10}>
+
+                  <SimpleGrid py={5} mb={10}>
+                    <FormControl>
+                      <InputGroup>
+                        <Input size="md" type="search" variant="outline" placeholder="Recherche animaux" />
+                        <Center>
+                          <Button _hover={{
+                            bg: "teal.500",
+                            fill: "white",
+                          }} bg="brand.100" fill="white">
+                            <Image boxSize="35px" src={Loupe} />
+                          </Button>
+                        </Center>
+                      </InputGroup>
+                    </FormControl>
+                  </SimpleGrid>
+
+                  <Spacer />
+                  <Divider borderWidth="1px" />
+                  <Box my={10}>
+
+                    <Button colorScheme="teal" textTransform='uppercase' mr={5} mb={5} variant="outline">
+                      <Link to="/particulier">espace particulier</Link>
+                    </Button>
+
+                    <Button colorScheme="teal" textTransform='uppercase' mr={5} variant="outline">
+                      <Link to="/veterinaire">espace vétérinaire</Link>
+                    </Button>
+                  </Box>
+                </Box>
+              </DrawerBody>
+            </DrawerContent>
+          </DrawerOverlay>
+        </Drawer>
       </Flex>
       <Divider borderWidth="1px" />
     </>
