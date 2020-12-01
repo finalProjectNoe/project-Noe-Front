@@ -9,13 +9,12 @@ function LoginVeterinaire() {
 
   const noe = useContext(NoeContext)
 
-  const [inputValueAdress, setInputValueAdress] = useState(null)
   const [inputValueName, setInputValueName] = useState(null)
   const [inputValuePhoneNumber, setInputValuePhoneNumber] = useState(null)
 
 
   const handleOnClickCreateVeterinary = async () => {
-    const CVTX1 = await noe.createVeterinary(inputValueAdress, inputValueAdress, inputValuePhoneNumber)
+    const CVTX1 = await noe.createVeterinary(inputValueName, inputValuePhoneNumber)
   }
 
   // const handleOnClickConnectionVeterinary = async () => {
@@ -32,15 +31,11 @@ function LoginVeterinaire() {
             <Box borderWidth="1px" p={50} borderRadius={5}>
 
               <Center>
-                <Heading mb={10}>Inscription</Heading>
+                <Heading mb={10}>Inscription Vétérinaires</Heading>
               </Center>
 
               <FormControl isRequired>
                 <Stack spacing={8} >
-
-                  <Input
-                    value={inputValueAdress} onChange={(e) => { setInputValueAdress(e.currentTarget.value) }}
-                    variant="filled" id="fname" placeholder="Adresse ETH" />
 
                   <Input
                     value={inputValueName} onChange={(e) => { setInputValueName(e.currentTarget.value) }}

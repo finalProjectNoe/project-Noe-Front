@@ -10,17 +10,18 @@ function LoginParticulier() {
 
   const noe = useContext(NoeContext)
 
-  const [inputValueAdressMember, setInputValueAdressMember] = useState(null)
   const [inputValueNameMember, setInputValueNameMember] = useState(null)
   const [inputValuePhoneMember, setInputValuePhoneMember] = useState(null)
+  const [inputValueAdressMember, setInputValueAdressMember] = useState(null)
+  const [inputValueNameCoMember, setInputValueNameCoMember] = useState(null)
 
   const handleOnClickCreateMember = async () => {
     const CMTX1 = await noe.createMember(inputValueNameMember, inputValuePhoneMember)
   }
 
-  // const handleOnClickConnectionMember = async () => {
-  //   const CMTX2 = await noe.connectionMember(inputValue)
-  // }
+  const handleOnClickConnectionMember = async () => {
+    const CMTX2 = await noe.connectionMember(inputValueAdressMember, inputValueNameCoMember)
+  }
 
 
   return (
@@ -33,14 +34,11 @@ function LoginParticulier() {
             <Box borderWidth="1px" p={50} borderRadius={5}>
 
               <Center>
-                <Heading mb={10}>Inscription</Heading>
+                <Heading mb={10}>Inscription Particuliers</Heading>
               </Center>
 
               <FormControl isRequired>
                 <Stack spacing={8} >
-
-                  <Input value={inputValueAdressMember} onChange={(e) => { setInputValueAdressMember(e.currentTarget.value) }}
-                    variant="filled" id="fname" placeholder="Adresse ETH" />
 
                   <Input value={inputValueNameMember} onChange={(e) => { setInputValueNameMember(e.currentTarget.value) }}
                     variant="filled" id="fname" placeholder="Nom" />
@@ -55,7 +53,7 @@ function LoginParticulier() {
 
             </Box>
 
-            {/* <Box borderWidth="1px" p={50} borderRadius={5}>
+            <Box borderWidth="1px" p={50} borderRadius={5}>
 
               <Center>
                 <Heading mb={10}>Connexion</Heading>
@@ -64,17 +62,18 @@ function LoginParticulier() {
               <FormControl isRequired>
                 <Stack spacing={50} >
 
-                  <Input variant="filled" id="fname" placeholder="Adresse ETH" />
+                <Input value={inputValueAdressMember} onChange={(e) => { setInputValueAdressMember(e.currentTarget.value) }}
+                 variant="filled" id="fname" placeholder="Adresse ETH" />
 
-                  <Input variant="filled" id="fname" placeholder="Nom" />
+                <Input value={inputValueNameCoMember} onChange={(e) => { setInputValueNameCoMember(e.currentTarget.value) }}
+                  variant="filled" id="fname" placeholder="Nom" />
 
-                  <Button onClick={handleOnClickConnectionMember} textTransform='uppercase' colorScheme="teal">
-                    <Link to="/profil_particulier">Connexion</Link>
-                  </Button>
+                  <Button onClick={handleOnClickConnectionMember} textTransform='uppercase' colorScheme="teal">Connexion</Button>
+
                 </Stack>
               </FormControl >
 
-            </Box> */}
+            </Box>
           </SimpleGrid>
         </Box>
       </VStack>
