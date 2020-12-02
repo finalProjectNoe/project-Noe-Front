@@ -1,5 +1,5 @@
 /* eslint-disable */
-export const Noe_address = '0x2B41CdAd6B2c1f063218Fe1680324F243C55d716'
+export const Noe_address = '0xA773a52dF7cf4343A7c237De517BE50fF04cd09D'
 
 export const Noe_abi = [
 	{
@@ -10,36 +10,29 @@ export const Noe_abi = [
 				"type": "address"
 			},
 			{
-				"components": [
-					{
-						"internalType": "string",
-						"name": "name",
-						"type": "string"
-					},
-					{
-						"internalType": "uint8",
-						"name": "dateBirth",
-						"type": "uint8"
-					},
-					{
-						"internalType": "string",
-						"name": "sexe",
-						"type": "string"
-					},
-					{
-						"internalType": "bool",
-						"name": "vaccin",
-						"type": "bool"
-					},
-					{
-						"internalType": "enum Noe.Animals",
-						"name": "animals",
-						"type": "uint8"
-					}
-				],
-				"internalType": "struct Noe.Animal",
-				"name": "animal_",
-				"type": "tuple"
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_dateBirth",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_sexe",
+				"type": "string"
+			},
+			{
+				"internalType": "bool",
+				"name": "_vaccin",
+				"type": "bool"
+			},
+			{
+				"internalType": "enum Noe.Animals",
+				"name": "animals_",
+				"type": "uint8"
 			}
 		],
 		"name": "animalToken",
@@ -157,6 +150,11 @@ export const Noe_abi = [
 				"internalType": "address",
 				"name": "_addr",
 				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
 			}
 		],
 		"name": "connectionMember",
@@ -170,6 +168,11 @@ export const Noe_abi = [
 				"internalType": "address",
 				"name": "_addr",
 				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
 			}
 		],
 		"name": "connectionVeterinary",
@@ -191,13 +194,7 @@ export const Noe_abi = [
 			}
 		],
 		"name": "createMember",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
+		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
@@ -215,13 +212,7 @@ export const Noe_abi = [
 			}
 		],
 		"name": "createVeterinary",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
+		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
@@ -444,9 +435,9 @@ export const Noe_abi = [
 						"type": "string"
 					},
 					{
-						"internalType": "uint8",
+						"internalType": "string",
 						"name": "dateBirth",
-						"type": "uint8"
+						"type": "string"
 					},
 					{
 						"internalType": "string",
