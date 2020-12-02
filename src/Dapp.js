@@ -21,8 +21,8 @@ function Dapp() {
         <Route path="/profil_particulier" exact component={ProfilParticuliers} />
         <Route path="/profil_veterinaire" exact component={ProfilVeterinaire} />
         <Route path="/recherche_animal" exact component={RechercheAnimal} />
+        <Route path="/admin" exact component={Admin} />
         <Route path="/modification_animal" exact component={ModificationAnimal} />
-        <Route path="/Admin" exact component={Admin} />
       </Switch>
     </Router>
   )
