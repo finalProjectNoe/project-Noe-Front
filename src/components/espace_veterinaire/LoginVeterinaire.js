@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Center, Button, Stack, Input, Heading, FormControl, Box, SimpleGrid, VStack } from '@chakra-ui/core'
+import { Center, Button, Stack, Input, Heading, FormControl, Box, SimpleGrid, VStack, FormLabel } from '@chakra-ui/core'
 // import { Link } from 'react-router-dom';
 import Nav from '../Nav'
 import Footer from '../Footer'
@@ -36,21 +36,26 @@ function LoginVeterinaire() {
               </Center>
 
               <FormControl isRequired>
-                <Stack spacing={8} >
-
-                  <Input
+                <Stack>
+                  <FormLabel htmlFor="ETH" pt={5}>ETH</FormLabel >
+                  <Input id='ETH'
                     value={inputValueAdress} onChange={(e) => { setInputValueAdress(e.currentTarget.value) }}
-                    variant="filled" id="fname" placeholder="Adresse ETH" />
+                    variant="filled" placeholder="Adresse ETH" aria-label="Adresse ETH" />
 
-                  <Input
+                  <FormLabel htmlFor="nom" pt={5}>Nom</FormLabel >
+                  <Input id="nom"
                     value={inputValueName} onChange={(e) => { setInputValueName(e.currentTarget.value) }}
-                    variant="filled" id="fname" placeholder="Nom" />
+                    variant="filled" placeholder="Nom" />
 
-                  <Input
+                  <FormLabel htmlFor="mobile" pt={5}>Mobile</FormLabel >
+                  <Input id="mobile"
                     value={inputValuePhoneNumber} onChange={(e) => { setInputValuePhoneNumber(e.currentTarget.value) }}
-                    variant="filled" id="fname" placeholder="Mobile" />
+                    variant="filled" placeholder="Mobile" aria-label="Mobile" />
 
-                  <Button textTransform='uppercase' colorScheme="teal" onClick={handleOnClickCreateVeterinary}>Inscription</Button>
+                  <Button name="button" _hover={{
+                    bg: "teal.500",
+                    color: "white",
+                  }} bg="brand.900" color="white" textTransform='uppercase' onClick={handleOnClickCreateVeterinary}>Inscription</Button>
                 </Stack>
               </FormControl >
 
@@ -69,7 +74,7 @@ function LoginVeterinaire() {
 
                   <Input variant="filled" id="fname" placeholder="Nom" />
 
-                  <Button textTransform='uppercase' colorScheme="teal" onClick={handleOnClickConnectionVeterinary}><Link to="/profil_veterinaire">Connexion</Link></Button>
+                  <Button name="button" textTransform='uppercase' colorScheme="teal" onClick={handleOnClickConnectionVeterinary}><Link to="/profil_veterinaire">Connexion</Link></Button>
                 </Stack>
               </FormControl >
 

@@ -27,11 +27,14 @@ function Home() {
 
           <HStack spacing='24px'>
 
-            <Button colorScheme="teal" textTransform='uppercase'>
+            <Button name="button" _hover={{
+              bg: "teal.500",
+              color: "white",
+            }} bg="brand.900" color="white" textTransform='uppercase'>
               <Link to="/particulier">espace particulier</Link>
             </Button>
 
-            <Button _hover={{
+            <Button name="button" _hover={{
               bg: "teal.500",
               color: "white",
             }} bg="brand.100" color="white" textTransform='uppercase' mx={5} >

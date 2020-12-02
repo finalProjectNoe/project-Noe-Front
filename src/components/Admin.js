@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Input, FormControl, Center, Box, SimpleGrid, VStack, Stack, Heading } from '@chakra-ui/core'
+import { Button, Input, FormControl, Center, Box, SimpleGrid, VStack, Stack, Heading, FormLabel } from '@chakra-ui/core'
 import Nav from "./Nav"
 import Footer from './Footer'
 
@@ -18,12 +18,16 @@ function Admin() {
               </Center>
               <FormControl>
                 <Stack my={10} >
-                  <Input type="text" placeholder="Approuve vétérinaire" variant="filled" />
+                  <FormLabel htmlFor="approuve"></FormLabel>
+                  <Input id="approuve" type="text" placeholder="Approuve vétérinaire" variant="filled" aria-label="approuve vétérinaire" />
 
                 </Stack>
               </FormControl >
               <Center>
-                <Button my={10} colorScheme="teal" textTransform='uppercase'>Approuve</Button>
+                <Button name="button" _hover={{
+                  bg: "teal.500",
+                  color: "white",
+                }} bg="brand.900" color="white" my={10} textTransform='uppercase'>Approuve</Button>
               </Center>
             </Box>
 
@@ -32,19 +36,19 @@ function Admin() {
                 <Heading fontFamily="Montserrat" mb={10}>Liste</Heading>
               </Center>
               <Box>
-                <Button my={5} _hover={{
+                <Button name="button" my={5} _hover={{
                   bg: "teal.500",
                   color: "white",
                 }} bg="brand.100" color="white" textTransform='uppercase'>Name</Button>
               </Box>
               <Box>
-                <Button my={5} _hover={{
+                <Button name="button" my={5} _hover={{
                   bg: "teal.500",
                   color: "white",
                 }} bg="brand.100" color="white" textTransform='uppercase'>Symbole</Button>
               </Box>
               <Box>
-                <Button my={5} _hover={{
+                <Button name="button" my={5} _hover={{
                   bg: "teal.500",
                   color: "white",
                 }} bg="brand.100" color="white" textTransform='uppercase'>Animal count</Button>

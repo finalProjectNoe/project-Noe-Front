@@ -11,7 +11,7 @@ const theme = extendTheme({
   colors: {
     brand: {
       100: '#246A73',
-      900: '#368F8B'
+      900: '#008485'
     },
     bad: {
       100: '#F3DFC1',

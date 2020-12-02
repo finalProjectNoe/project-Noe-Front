@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ProfilVeterinaire from './components/espace_veterinaire/ProfilVeterinaire'
 import RechercheAnimal from './components/espace_veterinaire/RechercheAnimal'
 import Admin from './components/Admin'
+import ModificationAnimal from './components/espace_veterinaire/ModificationAnimal'
 
 
 function Dapp() {
@@ -20,6 +21,7 @@ function Dapp() {
         <Route path="/profil_particulier" exact component={ProfilParticuliers} />
         <Route path="/profil_veterinaire" exact component={ProfilVeterinaire} />
         <Route path="/recherche_animal" exact component={RechercheAnimal} />
+        <Route path="/modification_animal" exact component={ModificationAnimal} />
         <Route path="/Admin" exact component={Admin} />
       </Switch>
     </Router>

@@ -18,7 +18,7 @@ function Profilveterinaire() {
 
           <Box>
             <VStack>
-              <Image borderRadius="full" boxSize="100px" objectFit="cover" src={Woman} />
+              <Image borderRadius="full" boxSize="100px" objectFit="cover" src={Woman} alt="avatar" />
             </VStack>
           </Box>
           <Box>

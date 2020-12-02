@@ -25,13 +25,12 @@ function Nav() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
 
-
   return (
     <>
-      <Flex fontFamily="Montserrat">
+      <Flex fontFamily="Montserrat ">
         <Box py={3}>
           <Link to="/">
-            <Image boxSize="100px" objectFit="cover" src={Logo} />
+            <Image boxSize="100px" objectFit="cover" src={Logo} alt="logo noé" />
           </Link>
         </Box>
         <Spacer />
@@ -40,15 +39,15 @@ function Nav() {
           {!web3State.is_logged && (
             <>
 
-              <Button _hover={{
+              <Button name="button" _hover={{
                 bg: "teal.500",
                 color: "white",
               }} bg="brand.100" color="white" textTransform='uppercase' mr={5} onClick={login}>Start</Button>
             </>
           )}
         </Box>
-        <Button variant="link" ref={btnRef} onClick={onOpen} size="sm" py={10} mr={10} >
-          <Image boxSize="25px" src={Burger} />
+        <Button name="button" variant="link" ref={btnRef} onClick={onOpen} size="sm" py={10} mr={10} >
+          <Image boxSize="25px" src={Burger} alt="menu burger" />
         </Button>
 
         <Drawer
@@ -68,7 +67,7 @@ function Nav() {
                       <InputGroup>
                         <Input size="md" type="search" variant="outline" placeholder="Recherche animaux" />
                         <Center>
-                          <Button _hover={{
+                          <Button name="button" _hover={{
                             bg: "teal.500",
                             fill: "white",
                           }} bg="brand.100" fill="white">
@@ -85,14 +84,14 @@ function Nav() {
                   </SimpleGrid>
 
                   <Spacer />
-                  <Divider borderWidth="1px" />
+
                   <Box my={10} fontFamily="Montserrat">
 
-                    <Button colorScheme="teal" textTransform='uppercase' mr={5} mb={5} variant="outline">
+                    <Button name="button" colorScheme="teal" textTransform='uppercase' mr={5} mb={5} variant="outline">
                       <Link to="/particulier">espace particulier</Link>
                     </Button>
 
-                    <Button colorScheme="teal" textTransform='uppercase' mr={5} variant="outline">
+                    <Button name="button" colorScheme="teal" textTransform='uppercase' mr={5} variant="outline">
                       <Link to="/veterinaire">espace vétérinaire</Link>
                     </Button>
                   </Box>

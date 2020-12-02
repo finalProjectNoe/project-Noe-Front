@@ -9,21 +9,21 @@ import Linkedin from '../assets/linkedin.svg'
 function Footer() {
   return (
 
-    <Box py={5} bg="teal.500" fontFamily="Montserrat">
+    <Box py={10} bg="brand.900" fontFamily="Montserrat">
       <Center>
         <Link to="/">
-          <Image borderRadius="full" boxSize="100px" src={Logo} />
+          <Image borderRadius="full" boxSize="100px" src={Logo} alt="logo" />
         </Link>
       </Center>
       <Flex justifyContent="center" p={5} fontFamily="Montserrat">
         <Box>
-          <Image mx={10} borderRadius="full" boxSize="25px" objectFit="cover" src={Facebook} />
+          <Image mx={5} borderRadius="full" boxSize="32px" objectFit="cover" src={Facebook} alt="Facebook" />
         </Box>
         <Box>
-          <Image mx={10} borderRadius="full" boxSize="25px" objectFit="cover" src={Twitter} />
+          <Image mx={5} borderRadius="full" boxSize="32px" objectFit="cover" src={Twitter} alt="Twitter" />
         </Box>
         <Box>
-          <Image mx={10} borderRadius="full" boxSize="25px" objectFit="cover" src={Linkedin} />
+          <Image mx={5} borderRadius="full" boxSize="32px" objectFit="cover" src={Linkedin} alt="Linkedin" />
         </Box>
       </Flex>
       <Text textAlign="center" color="white" >© 2020 - NOE | Dev by Theo, Micka, Nico, Streed |   All right reserved</Text>

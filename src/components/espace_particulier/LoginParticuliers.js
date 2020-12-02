@@ -1,5 +1,5 @@
 import { React, useState, useContext } from 'react'
-import { Center, Button, Stack, Input, Heading, FormControl, Box, SimpleGrid, VStack } from '@chakra-ui/core'
+import { Center, Button, Stack, Input, Heading, FormControl, Box, SimpleGrid, VStack, FormLabel } from '@chakra-ui/core'
 // import { Link } from 'react-router-dom';
 import Nav from '../Nav'
 import Footer from '../Footer'
@@ -37,18 +37,23 @@ function LoginParticulier() {
               </Center>
 
               <FormControl isRequired>
-                <Stack spacing={8} >
+                <Stack >
+                  <FormLabel htmlFor="ETH" pt={5}>ETH</FormLabel>
+                  <Input id='ETH' value={inputValueAdressMember} onChange={(e) => { setInputValueAdressMember(e.currentTarget.value) }}
+                    variant="filled" placeholder="Adresse ETH" aria-label="Adresse ETH" />
 
-                  <Input value={inputValueAdressMember} onChange={(e) => { setInputValueAdressMember(e.currentTarget.value) }}
-                    variant="filled" id="fname" placeholder="Adresse ETH" />
+                  <FormLabel htmlFor="nom" pt={5}>Nom</FormLabel>
+                  <Input id="nom" value={inputValueNameMember} onChange={(e) => { setInputValueNameMember(e.currentTarget.value) }}
+                    variant="filled" placeholder="Nom" aria-label="Nom" />
 
-                  <Input value={inputValueNameMember} onChange={(e) => { setInputValueNameMember(e.currentTarget.value) }}
-                    variant="filled" id="fname" placeholder="Nom" />
+                  <FormLabel htmlFor="mobile" pt={5}>Mobile</FormLabel>
+                  <Input id="mobile" value={inputValuePhoneMember} onChange={(e) => { setInputValuePhoneMember(e.currentTarget.value) }}
+                    variant="filled" placeholder="Mobile" aria-label="Mobile" />
 
-                  <Input value={inputValuePhoneMember} onChange={(e) => { setInputValuePhoneMember(e.currentTarget.value) }}
-                    variant="filled" id="fname" placeholder="Mobile" />
-
-                  <Button onClick={handleOnClickCreateMember} textTransform='uppercase' colorScheme="teal">Inscription</Button>
+                  <Button name="button" _hover={{
+                    bg: "teal.500",
+                    color: "white",
+                  }} bg="brand.900" color="white" onClick={handleOnClickCreateMember} textTransform='uppercase' >Inscription</Button>
 
                 </Stack>
               </FormControl >
@@ -68,7 +73,7 @@ function LoginParticulier() {
 
                   <Input variant="filled" id="fname" placeholder="Nom" />
 
-                  <Button onClick={handleOnClickConnectionMember} textTransform='uppercase' colorScheme="teal">
+                  <Button name="button" onClick={handleOnClickConnectionMember} textTransform='uppercase' colorScheme="teal">
                     <Link to="/profil_particulier">Connexion</Link>
                   </Button>
                 </Stack>

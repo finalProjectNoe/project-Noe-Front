@@ -22,13 +22,13 @@ function NavParticulier() {
       <Flex fontFamily="Montserrat">
         <Box py={3}>
           <Link to="/">
-            <Image boxSize="100px" objectFit="cover" src={Logo} />
+            <Image boxSize="100px" objectFit="cover" src={Logo} alt="logo" />
           </Link>
         </Box>
         <Spacer />
 
-        <Button variant="link" ref={btnRef} onClick={onOpen} size="sm" py={10} mr={10} >
-          <Image boxSize="25px" src={Burger} />
+        <Button name="button" variant="link" ref={btnRef} onClick={onOpen} size="sm" py={10} mr={10} >
+          <Image boxSize="25px" src={Burger} alt="menu" />
         </Button>
 
         <Drawer
@@ -43,12 +43,12 @@ function NavParticulier() {
               <DrawerBody>
                 <Box py={10} fontFamily="Montserrat">
 
-                  <Button mr={5} colorScheme="teal" textTransform='uppercase' variant="link">
+                  <Button name="button" mr={5} colorScheme="teal" textTransform='uppercase' variant="link">
                     <Link to="/profil_particulier">Mon espace</Link>
                   </Button>
                 </Box>
                 <Box fontFamily="Montserrat">
-                  <Button mr={5} colorScheme="teal" textTransform='uppercase' variant="link">
+                  <Button name="button" mr={5} colorScheme="teal" textTransform='uppercase' variant="link">
                     <Link to="/">Deconnexion</Link>
                   </Button>
                 </Box>

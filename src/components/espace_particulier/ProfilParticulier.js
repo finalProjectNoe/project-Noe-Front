@@ -19,7 +19,7 @@ function ProfilParticulier() {
 
           <Box>
             <VStack>
-              <Image borderRadius="full" boxSize="100px" objectFit="cover" src={Man} />
+              <Image borderRadius="full" boxSize="100px" objectFit="cover" src={Man} alt="avatar particulier" />
             </VStack>
           </Box>
 
@@ -43,11 +43,11 @@ function ProfilParticulier() {
       </Center>
       <Box p={20} fontFamily="Montserrat">
 
-        <SimpleGrid columns={[1, 1, 4]} spacing="40px" p={20} fontFamily="Montserrat" borderWidth="1px">
+        <SimpleGrid columns={[1, 1, 5]} spacing="40px" p={20} fontFamily="Montserrat" borderWidth="1px">
 
           <Box>
             <VStack>
-              <Image borderRadius="full" boxSize="100px" objectFit="cover" src={cat_profil} />
+              <Image borderRadius="full" boxSize="100px" objectFit="cover" src={cat_profil} alt="avatar animal" />
               <Text>Nom</Text>
             </VStack>
           </Box>
@@ -62,7 +62,13 @@ function ProfilParticulier() {
           <Box>
             <VStack>
               <Text textAlign="center">Date de naissance</Text>
-              <Text>Vaccin</Text>
+              <Text>Type</Text>
+            </VStack>
+          </Box>
+
+          <Box>
+            <VStack>
+              <Text textAlign="center">Vaccin</Text>
             </VStack>
           </Box>
 

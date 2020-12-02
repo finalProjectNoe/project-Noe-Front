@@ -23,13 +23,13 @@ function NavVeteinaire() {
       <Flex fontFamily="Montserrat">
         <Box py={3}>
           <Link to="/">
-            <Image boxSize="100px" objectFit="cover" src={Logo} />
+            <Image boxSize="100px" objectFit="cover" src={Logo} alt="logo" />
           </Link>
         </Box>
         <Spacer />
 
-        <Button variant="link" ref={btnRef} onClick={onOpen} size="sm" py={10} mr={10} >
-          <Image boxSize="25px" src={Burger} />
+        <Button name="button" variant="link" ref={btnRef} onClick={onOpen} size="sm" py={10} mr={10} >
+          <Image boxSize="25px" src={Burger} alt="menu" />
         </Button>
 
         <Drawer
@@ -45,11 +45,11 @@ function NavVeteinaire() {
                 <Box py={10}>
 
                   <SimpleGrid py={5} mb={10}>
-                    <FormControl>
+                    <FormControl >
                       <InputGroup>
-                        <Input size="md" type="search" variant="outline" placeholder="Recherche animaux" />
+                        <Input id="search" size="md" type="search" variant="outline" placeholder="Recherche animaux" />
                         <Center>
-                          <Button _hover={{
+                          <Button name="button" _hover={{
                             bg: "teal.500",
                             fill: "white",
                           }} bg="brand.100" fill="white">
@@ -69,12 +69,12 @@ function NavVeteinaire() {
                   <Divider borderWidth="1px" />
                   <Box my={10} fontFamily="Montserrat">
 
-                    <Button mr={5} colorScheme="teal" textTransform='uppercase' variant="link">
+                    <Button name="button" mr={5} colorScheme="teal" textTransform='uppercase' variant="link">
                       <Link to="/profil_veterinaire">Mon espace</Link>
                     </Button>
                   </Box>
                   <Box fontFamily="Montserrat">
-                    <Button mr={5} colorScheme="teal" textTransform='uppercase' variant="link">
+                    <Button name="button" mr={5} colorScheme="teal" textTransform='uppercase' variant="link">
                       <Link to="/">Deconnexion</Link>
                     </Button>
                   </Box>
