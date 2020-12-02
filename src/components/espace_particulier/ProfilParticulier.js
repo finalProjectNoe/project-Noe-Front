@@ -15,7 +15,7 @@ function ProfilParticulier() {
       </Center>
       <Box p={20} fontFamily="Montserrat">
 
-        <SimpleGrid columns={[1, 2, 3]} spacing="40px" p={20} fontFamily="Montserrat" borderWidth="1px">
+        <SimpleGrid columns={[1, 1, 4]} spacing="40px" p={20} fontFamily="Montserrat" borderWidth="1px">
 
           <Box>
             <VStack>
@@ -43,7 +43,7 @@ function ProfilParticulier() {
       </Center>
       <Box p={20} fontFamily="Montserrat">
 
-        <SimpleGrid columns={[1, 2, 3]} spacing="40px" p={20} fontFamily="Montserrat" borderWidth="1px">
+        <SimpleGrid columns={[1, 1, 4]} spacing="40px" p={20} fontFamily="Montserrat" borderWidth="1px">
 
           <Box>
             <VStack>

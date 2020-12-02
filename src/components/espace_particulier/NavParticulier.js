@@ -2,26 +2,61 @@ import React from 'react'
 import { Button, Box, Flex, Divider, Image, Spacer } from '@chakra-ui/core'
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png'
+import Burger from '../../assets/menu.svg'
+import {
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerBody,
+  DrawerCloseButton,
+  useDisclosure,
+} from "@chakra-ui/core"
 
 function NavParticulier() {
+
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const btnRef = React.useRef()
 
   return (
     <>
       <Flex fontFamily="Montserrat">
         <Box py={3}>
-          <Link to="/profil_particulier">
+          <Link to="/">
             <Image boxSize="100px" objectFit="cover" src={Logo} />
           </Link>
         </Box>
         <Spacer />
-        <Box py={10}>
-          <Button mr={5} colorScheme="teal" textTransform='uppercase' variant="link">
-            <Link to="/profil_particulier">Mon espace</Link>
-          </Button>
-          <Button mr={5} colorScheme="teal" textTransform='uppercase' variant="link">
-            <Link to="/">Deconnexion</Link>
-          </Button>
-        </Box>
+
+        <Button variant="link" ref={btnRef} onClick={onOpen} size="sm" py={10} mr={10} >
+          <Image boxSize="25px" src={Burger} />
+        </Button>
+
+        <Drawer
+          isOpen={isOpen}
+          placement="right"
+          onClose={onClose}
+          finalFocusRef={btnRef}
+        >
+          <DrawerOverlay>
+            <DrawerContent>
+              <DrawerCloseButton />
+              <DrawerBody>
+                <Box py={10} fontFamily="Montserrat">
+
+                  <Button mr={5} colorScheme="teal" textTransform='uppercase' variant="link">
+                    <Link to="/profil_particulier">Mon espace</Link>
+                  </Button>
+                </Box>
+                <Box fontFamily="Montserrat">
+                  <Button mr={5} colorScheme="teal" textTransform='uppercase' variant="link">
+                    <Link to="/">Deconnexion</Link>
+                  </Button>
+                </Box>
+
+              </DrawerBody>
+            </DrawerContent>
+          </DrawerOverlay>
+        </Drawer>
       </Flex>
       <Divider borderWidth="1px" />
     </>
@@ -29,3 +64,4 @@ function NavParticulier() {
 }
 
 export default NavParticulier
+
