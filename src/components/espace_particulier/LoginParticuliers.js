@@ -1,6 +1,5 @@
 import { React, useState, useContext } from 'react'
 import { Center, Button, Stack, Input, Heading, FormControl, Box, SimpleGrid, VStack, FormLabel } from '@chakra-ui/core'
-import { Link } from 'react-router-dom';
 import Nav from '../Nav'
 import Footer from '../Footer'
 import { NoeContext } from '../../App'
@@ -66,18 +65,18 @@ function LoginParticulier() {
 
               <FormControl isRequired>
                 <Stack spacing={50} >
+                  <FormLabel htmlFor="adresse-ETH" >ETH</FormLabel>
+                  <Input id="adresse-ETH" value={inputValueAdressMember} onChange={(e) => { setInputValueAdressMember(e.currentTarget.value) }}
+                    variant="filled" placeholder="Adresse ETH" />
+                  <FormLabel htmlFor="Nom" pt={5}>Nom</FormLabel>
+                  <Input id="Nom" value={inputValueNameCoMember} onChange={(e) => { setInputValueNameCoMember(e.currentTarget.value) }}
+                    variant="filled" placeholder="Nom" />
 
-                  <Input value={inputValueAdressMember} onChange={(e) => { setInputValueAdressMember(e.currentTarget.value) }}
-                    variant="filled" id="fname" placeholder="Adresse ETH" />
+                  <Button _hover={{
+                    bg: "teal.500",
+                    color: "white",
+                  }} bg="brand.900" color="white" onClick={handleOnClickConnectionMember} textTransform='uppercase' colorScheme="teal">Connexion</Button>
 
-                  <Input value={inputValueNameCoMember} onChange={(e) => { setInputValueNameCoMember(e.currentTarget.value) }}
-                    variant="filled" id="fname" placeholder="Nom" />
-
-                  <Button onClick={handleOnClickConnectionMember} textTransform='uppercase' colorScheme="teal">Connexion</Button>
-
-                  <Button name="button" onClick={handleOnClickConnectionMember} textTransform='uppercase' colorScheme="teal">
-                    <Link to="/profil_particulier">Connexion</Link>
-                  </Button>
                 </Stack>
               </FormControl >
 

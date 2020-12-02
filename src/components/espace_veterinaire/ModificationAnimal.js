@@ -1,15 +1,15 @@
 import React from 'react'
 import { Center, Button, Stack, Input, Heading, FormControl, Box, SimpleGrid, VStack, FormLabel } from '@chakra-ui/core'
 // import { Link } from 'react-router-dom';
-import Nav from '../Nav'
 import Footer from '../Footer'
+import NavVeteinaire from './NavVeterinaire'
 
 
 function ModificationAnimal() {
 
   return (
     <>
-      <Nav />
+      <NavVeteinaire />
       <VStack py={20}>
         <Box my={10}>
           <SimpleGrid columns={[1, 1, 2]} spacing="40px">

@@ -63,20 +63,19 @@ function Admin() {
               <Center>
                 <Heading fontFamily="Montserrat" mb={10}>Approuvre vétérinaire</Heading>
               </Center>
-              <FormControl>
-                <Stack my={10} >
-                  <FormLabel htmlFor="approuve"></FormLabel>
-                  <Input id="approuve" type="text" placeholder="Approuve vétérinaire" variant="filled" aria-label="approuve vétérinaire" />
 
-                </Stack>
-              </FormControl >
               <Center>
-                <Input value={inputValueAdressVet} onChange={(e) => { setInputValueAdressVet(e.currentTarget.value) }}
-                  type="text" placeholder="Approuve vétérinaire" variant="filled" />
-                <Button name="button" _hover={{
-                  bg: "teal.500",
-                  color: "white",
-                }} bg="brand.900" color="white" onClick={handleOnClickApproveVet} my={10} textTransform='uppercase'>Approuve</Button>
+                <FormControl>
+                  <Stack my={10} >
+                    <FormLabel htmlFor="approuve"></FormLabel>
+                    <Input id="approuve" value={inputValueAdressVet} onChange={(e) => { setInputValueAdressVet(e.currentTarget.value) }}
+                      type="text" placeholder="Approuve vétérinaire" variant="filled" aria-label="approuve vétérinaire" />
+                    <Button name="button" _hover={{
+                      bg: "teal.500",
+                      color: "white",
+                    }} bg="brand.900" color="white" onClick={handleOnClickApproveVet} my={10} textTransform='uppercase'>Approuve</Button>
+                  </Stack>
+                </FormControl >
               </Center>
             </Box>
 
@@ -107,7 +106,7 @@ function Admin() {
               </Box>
               <Box>
                 <Input value={inputValueVetApproval} onChange={(e) => { setInputValueVetApproval(e.currentTarget.value) }}
-                  type="text" placeholder="Adresse ETH" variant="filled" />
+                  type="text" placeholder="Adresse ETH" variant="filled" aria-label="adresse ETH" />
                 <Button onClick={handleOnClickGetVetApproval} my={5} _hover={{
                   bg: "teal.500",
                   color: "white",
