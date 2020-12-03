@@ -1,11 +1,10 @@
 import React from 'react'
 import { Center, Button, Stack, Input, Heading, FormControl, Box, SimpleGrid, VStack, FormLabel, Select } from '@chakra-ui/core'
-// import { Link } from 'react-router-dom';
 import Footer from '../Footer'
 import NavVeteinaire from './NavVeterinaire'
 
 
-function ModificationAnimal() {
+function AjoutAnimal() {
 
   return (
     <>
@@ -17,15 +16,15 @@ function ModificationAnimal() {
             <Box borderWidth="1px" p={50} borderRadius={5}>
 
               <Center>
-                <Heading mb={10}>Nom</Heading>
+                <Heading mb={10}>Ajouter un Animal</Heading>
               </Center>
 
               <FormControl>
                 <Stack >
-                  <FormLabel htmlFor="id" pt={5}>Id</FormLabel>
-                  <Input isDisabled id='id' variant="filled" placeholder="Id" aria-label="Id" />
                   <FormLabel htmlFor="ETH" pt={5}>ETH</FormLabel>
                   <Input id='ETH' variant="filled" placeholder="Adresse ETH" aria-label="ETH" />
+                  <FormLabel htmlFor="ETH" pt={5}>Nom</FormLabel>
+                  <Input id='ETH' variant="filled" placeholder="nom" aria-label="nom" />
                   <FormLabel htmlFor="sexe" pt={5}>Sexe</FormLabel>
                   <Input id='sexe' variant="filled" placeholder="Sexe" aria-label="Sexe" />
                   <FormLabel htmlFor="date-de-naissance" pt={5}>Date de naissance</FormLabel>
@@ -39,7 +38,7 @@ function ModificationAnimal() {
                   <Button _hover={{
                     bg: "teal.500",
                     color: "white",
-                  }} bg="brand.900" color="white" name="button" textTransform='uppercase'>Modfier</Button>
+                  }} bg="brand.900" color="white" name="button" textTransform='uppercase'>Ajouter</Button>
                 </Stack>
               </FormControl >
             </Box>
@@ -52,4 +51,4 @@ function ModificationAnimal() {
   )
 }
 
-export default ModificationAnimal
+export default AjoutAnimal

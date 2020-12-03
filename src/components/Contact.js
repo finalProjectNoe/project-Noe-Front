@@ -15,7 +15,7 @@ function Contact() {
               <FormControl>
                 <FormLabel htmlFor="email">Email</FormLabel>
                 <Input id="email" type="email" placeholder="Email" variant="filled" aria-label="email" />
-                <FormLabel htmlFor="message">Message</FormLabel>
+                <FormLabel mt={10} htmlFor="message">Message</FormLabel>
                 <Textarea id="message" rows="5" cols="50" borderWidth="1px" placeholder="Message" variant="filled" aria-label="Message" />
               </FormControl >
               <Center>

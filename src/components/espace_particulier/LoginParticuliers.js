@@ -33,18 +33,18 @@ function LoginParticulier() {
             <Box borderWidth="1px" p={50} borderRadius={5}>
 
               <Center>
-                <Heading mb={10}>Inscription Particuliers</Heading>
+                <Heading>Inscription Particuliers</Heading>
               </Center>
 
               <FormControl isRequired>
                 <Stack >
 
-                  <FormLabel htmlFor="nom" pt={5}>Nom</FormLabel>
+                  <FormLabel htmlFor="nom" pt={10}>Nom</FormLabel>
                   <Input id="nom" value={inputValueNameMember} onChange={(e) => { setInputValueNameMember(e.currentTarget.value) }}
                     variant="filled" placeholder="Nom" aria-label="Nom" />
 
                   <FormLabel htmlFor="mobile" pt={5}>Mobile</FormLabel>
-                  <Input id="mobile" value={inputValuePhoneMember} onChange={(e) => { setInputValuePhoneMember(e.currentTarget.value) }}
+                  <Input mb={20} id="mobile" value={inputValuePhoneMember} onChange={(e) => { setInputValuePhoneMember(e.currentTarget.value) }}
                     variant="filled" placeholder="Mobile" aria-label="Mobile" />
 
                   <Button name="button" _hover={{
@@ -60,16 +60,16 @@ function LoginParticulier() {
             <Box borderWidth="1px" p={50} borderRadius={5}>
 
               <Center>
-                <Heading mb={10}>Connexion</Heading>
+                <Heading >Connexion</Heading>
               </Center>
 
               <FormControl isRequired>
-                <Stack spacing={50} >
-                  <FormLabel htmlFor="adresse-ETH" >ETH</FormLabel>
+                <Stack >
+                  <FormLabel pt={10} htmlFor="adresse-ETH" >ETH</FormLabel>
                   <Input id="adresse-ETH" value={inputValueAdressMember} onChange={(e) => { setInputValueAdressMember(e.currentTarget.value) }}
                     variant="filled" placeholder="Adresse ETH" />
-                  <FormLabel htmlFor="Nom" pt={5}>Nom</FormLabel>
-                  <Input id="Nom" value={inputValueNameCoMember} onChange={(e) => { setInputValueNameCoMember(e.currentTarget.value) }}
+                  <FormLabel pt={5} htmlFor="Nom">Nom</FormLabel>
+                  <Input mb={20} id="Nom" value={inputValueNameCoMember} onChange={(e) => { setInputValueNameCoMember(e.currentTarget.value) }}
                     variant="filled" placeholder="Nom" />
 
                   <Button _hover={{

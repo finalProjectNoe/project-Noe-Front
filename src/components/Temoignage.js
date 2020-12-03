@@ -13,21 +13,21 @@ function Temoignage() {
       </Center>
       <SimpleGrid columns={[1, 1, 3]} spacing="40px" p={20} fontFamily="Montserrat">
         <Box>
-          <VStack>
+          <VStack spacing={10}>
             <Image borderRadius="full" boxSize="100px" objectFit="cover" src={Woman} alt="Avatar" />
             <Text textAlign="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</Text>
             <Text fontWeight="bold">Alice DUPONT</Text>
           </VStack>
         </Box>
         <Box>
-          <VStack>
+          <VStack spacing={10}>
             <Image borderRadius="full" boxSize="100px" objectFit="cover" src={Man} alt="Avatar" />
             <Text textAlign="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</Text>
             <Text fontWeight="bold">Bob DUBOIS</Text>
           </VStack>
         </Box>
         <Box>
-          <VStack>
+          <VStack spacing={10}>
             <Image borderRadius="full" boxSize="100px" objectFit="cover" src={Man} alt="Avatar" />
             <Center>
               <Text textAlign="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</Text>

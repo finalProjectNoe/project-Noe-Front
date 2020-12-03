@@ -13,7 +13,7 @@ function CommentçaMarche() {
       </Center>
       <SimpleGrid columns={[1, 1, 3]} spacing="40px" p={20} fontFamily="Montserrat">
         <Box>
-          <VStack>
+          <VStack spacing={10}>
             <Image boxSize="100px" objectFit="cover" src={Dog} alt="dog" />
             <Text fontWeight="bold" fontSize="2xl">Inscription</Text>
             <Text textAlign={"center"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</Text>
@@ -21,7 +21,7 @@ function CommentçaMarche() {
         </Box>
 
         <Box>
-          <VStack>
+          <VStack spacing={10}>
             <Image boxSize="100px" objectFit="cover" src={Cat} alt="cat" />
             <Text fontWeight="bold" textAlign={"center"} fontSize="2xl">Attribution de l’animal par votre vétérinaire</Text>
             <Text textAlign={"center"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</Text>
@@ -29,7 +29,7 @@ function CommentçaMarche() {
         </Box>
 
         <Box>
-          <VStack>
+          <VStack spacing={10}>
             <Image boxSize="100px" objectFit="cover" src={Ferret} alt="ferret" />
             <Text textAlign={"center"} fontWeight="bold" fontSize="2xl">Connexion à votre espace</Text>
             <Center>

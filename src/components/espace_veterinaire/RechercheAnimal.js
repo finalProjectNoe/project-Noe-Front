@@ -3,6 +3,7 @@ import { Heading, Text, Box, VStack, SimpleGrid, Image, Button, Flex } from '@ch
 import NavVeterinaire from './NavVeterinaire'
 import Footer from '../Footer'
 import cat_profil from '../../assets/cat_profil.svg'
+import { Link } from 'react-router-dom';
 
 
 function RechercheAnimal() {
@@ -13,7 +14,7 @@ function RechercheAnimal() {
       <Flex justifyContent="space-around">
 
         <Heading pt={20} fontFamily="Montserrat" as="h2">Tous les animaux</Heading>
-        <Button name="button" fontFamily="Montserrat" mt={20} colorScheme="teal" variant="outline">Ajouter</Button>
+        <Button name="button" fontFamily="Montserrat" mt={20} colorScheme="teal" variant="outline"><Link to="/ajout_animal">Ajouter</Link></Button>
 
       </Flex>
       <Box p={20} fontFamily="Montserrat">
@@ -47,7 +48,8 @@ function RechercheAnimal() {
           </Box>
           <Box>
             <VStack>
-              <Button name="button" colorScheme="teal" variant="outline">Modifier</Button>
+              <Button name="button" colorScheme="teal" variant="outline">
+                <Link to="/modification_animal">Modifier</Link></Button>
             </VStack>
           </Box>
 
