@@ -11,15 +11,17 @@ function LoginVeterinaire() {
 
   const [inputValueName, setInputValueName] = useState(null)
   const [inputValuePhoneNumber, setInputValuePhoneNumber] = useState(null)
+  const [inputValueAdressVet, setInputValueAdressVet] = useState(null)
+  const [inputValueNameCoVet, setInputValueNameCoVet] = useState(null)
 
 
   const handleOnClickCreateVeterinary = async () => {
     const CVTX1 = await noe.createVeterinary(inputValueName, inputValuePhoneNumber)
   }
 
-  // const handleOnClickConnectionVeterinary = async () => {
-  //   const CVTX2 = await noe.connectionVeterinary(inputValue)
-  // }
+  const handleOnClickConnectionVeterinary = async () => {
+    const CVTX2 = await noe.connectionVeterinary(inputValueAdressVet, inputValueNameCoVet)
+  }
 
   return (
     <>
@@ -56,7 +58,7 @@ function LoginVeterinaire() {
 
             </Box>
 
-            {/* <Box borderWidth="1px" p={50} borderRadius={5}>
+            <Box borderWidth="1px" p={50} borderRadius={5}>
 
               <Center>
                 <Heading mb={10}>Connexion</Heading>
@@ -65,15 +67,17 @@ function LoginVeterinaire() {
               <FormControl isRequired>
                 <Stack spacing={50} >
 
-                  <Input variant="filled" id="fname" placeholder="Adresse ETH" />
+                  <Input value={inputValueAdressVet} onChange={(e) => { setInputValueAdressVet(e.currentTarget.value) }} 
+                  variant="filled" id="fname" placeholder="Adresse ETH" />
 
-                  <Input variant="filled" id="fname" placeholder="Nom" />
+                  <Input value={inputValueNameCoVet} onChange={(e) => { setInputValueNameCoVet(e.currentTarget.value) }} 
+                  variant="filled" id="fname" placeholder="Nom" />
 
-                  <Button name="button" textTransform='uppercase' colorScheme="teal" onClick={handleOnClickConnectionVeterinary}><Link to="/profil_veterinaire">Connexion</Link></Button>
+                  <Button name="button" textTransform='uppercase' colorScheme="teal" onClick={handleOnClickConnectionVeterinary}></Button>
                 </Stack>
               </FormControl >
 
-            </Box> */}
+            </Box>
           </SimpleGrid>
         </Box>
       </VStack>

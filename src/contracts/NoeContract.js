@@ -1,12 +1,12 @@
 /* eslint-disable */
-export const Noe_address = '0xA773a52dF7cf4343A7c237De517BE50fF04cd09D'
+export const Noe_address = '0xc54778197Ecb7F0372A3a5a8779f66e768Ee6471'
 
 export const Noe_abi = [
 	{
 		"inputs": [
 			{
 				"internalType": "address",
-				"name": "_member",
+				"name": "_owner",
 				"type": "address"
 			},
 			{
@@ -56,6 +56,19 @@ export const Noe_abi = [
 		],
 		"stateMutability": "nonpayable",
 		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "_address",
+				"type": "address"
+			}
+		],
+		"name": "AnimalToken",
+		"type": "event"
 	},
 	{
 		"anonymous": false,
@@ -429,6 +442,11 @@ export const Noe_abi = [
 		"outputs": [
 			{
 				"components": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
 					{
 						"internalType": "string",
 						"name": "name",
