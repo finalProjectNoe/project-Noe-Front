@@ -7,7 +7,7 @@ function Temoignage() {
 
   return (
 
-    <Box py={20} bg="bad.100" fontFamily="Montserrat">
+    <Box py={20} bg="beige.100" fontFamily="Montserrat">
       <Center>
         <Heading fontFamily="Montserrat" mb={10} as="h2">Témoignages</Heading>
       </Center>
@@ -15,14 +15,14 @@ function Temoignage() {
         <Box>
           <VStack spacing={10}>
             <Image borderRadius="full" boxSize="100px" objectFit="cover" src={Woman} alt="Avatar" />
-            <Text textAlign="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</Text>
+            <Text textAlign="center">Salut c'est moi Bughy cela fait 2 ans que je suis dans la famille NOÉ tout se passe très bien. Voilà pour les petites nouvelles, je vous en redonne tres vite.</Text>
             <Text fontWeight="bold">Alice DUPONT</Text>
           </VStack>
         </Box>
         <Box>
           <VStack spacing={10}>
             <Image borderRadius="full" boxSize="100px" objectFit="cover" src={Man} alt="Avatar" />
-            <Text textAlign="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</Text>
+            <Text textAlign="center">Voilà déjà 10 mois que nous sommes dans la famille NOÉ. Nous sommes en pleine forme, heureux d'être là et aussi de faire des bêtises ... Nous embrassons tous les NOÉ !!!</Text>
             <Text fontWeight="bold">Bob DUBOIS</Text>
           </VStack>
         </Box>
@@ -30,7 +30,7 @@ function Temoignage() {
           <VStack spacing={10}>
             <Image borderRadius="full" boxSize="100px" objectFit="cover" src={Man} alt="Avatar" />
             <Center>
-              <Text textAlign="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</Text>
+              <Text textAlign="center">Quelques nouvelles de Slash le petit minou se porte très bien.</Text>
             </Center>
             <Text fontWeight="bold">Charlie MARTIN</Text>
           </VStack>

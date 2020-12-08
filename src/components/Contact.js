@@ -12,7 +12,7 @@ function Contact() {
         <VStack>
           <HStack>
             <SimpleGrid columns={1} spacing="20px" fontFamily="Montserrat">
-              <FormControl>
+              <FormControl isRequired>
                 <FormLabel htmlFor="email">Email</FormLabel>
                 <Input id="email" type="email" placeholder="Email" variant="filled" aria-label="email" />
                 <FormLabel mt={10} htmlFor="message">Message</FormLabel>

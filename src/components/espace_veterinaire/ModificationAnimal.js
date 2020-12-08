@@ -10,16 +10,13 @@ function ModificationAnimal() {
   return (
     <>
       <NavVeteinaire />
-      <VStack py={20}>
+      <VStack py={20} fontFamily="Montserrat">
         <Box my={10}>
           <SimpleGrid columns={[1]} spacing="40px">
-
             <Box borderWidth="1px" p={50} borderRadius={5}>
-
               <Center>
-                <Heading mb={10}>Nom</Heading>
+                <Heading fontFamily="Montserrat" mb={10}>Nom</Heading>
               </Center>
-
               <FormControl>
                 <Stack >
                   <FormLabel htmlFor="id" pt={5}>Id</FormLabel>
@@ -39,7 +36,7 @@ function ModificationAnimal() {
                   <Button _hover={{
                     bg: "teal.500",
                     color: "white",
-                  }} bg="brand.900" color="white" name="button" textTransform='uppercase'>Modfier</Button>
+                  }} bg="brand.900" color="white" name="button" textTransform='uppercase'>Modifier</Button>
                 </Stack>
               </FormControl >
             </Box>

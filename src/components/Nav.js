@@ -56,22 +56,17 @@ function Nav() {
         <Box my={12} mx={6} as="samp" fontSize="12px">
           {web3State.is_logged ? `✅ Connected wallet: ${web3State.is_metamask}`  : `🛑 Locked wallet: ${web3State.is_metamask}`}
           {!web3State.is_logged && (
-
-
             <>
-            <Box m={6}>
               <Button name="button" _hover={{
                 bg: "teal.500",
                 color: "white",
               }} bg="brand.100" color="white" textTransform='uppercase' mr={5} onClick={login}>Start</Button>
-              </Box>
             </>
           )}
         </Box>
         <Button name="button" variant="link" ref={btnRef} onClick={onOpen} size="sm" py={10} mr={10} >
           <Image boxSize="25px" src={Burger} alt="menu burger" />
         </Button>
-
         <Drawer
           isOpen={isOpen}
           placement="right"
@@ -83,19 +78,20 @@ function Nav() {
               <DrawerCloseButton />
               <DrawerBody>
                 <Box py={10}>
-
                   <SimpleGrid py={5} mb={10}>
                     <FormControl>
                       <InputGroup>
-                        <Input value={inputAnimalById} onChange={(e) => {setInputAnimalById(e.currentTarget.value) }}
-                        size="md" type="search" variant="outline" placeholder="Recherche animaux" />
+                        <Input _hover={{
+                          color: "brand.900",
+                        }} borderColor="brand.100" value={inputAnimalById} onChange={(e) => { setInputAnimalById(e.currentTarget.value) }}
+                          size="md" type="search" variant="outline" placeholder="Recherche animaux" />
                         <Center>
                           <Button onClick={handleOnClickGetAnimalByID}
                             _hover={{
                               bg: "teal.500",
                               fill: "white",
-                            }} bg="brand.100" fill="white">
-                            <Icon viewBox="0 0 512.005 512.005" color="white" >
+                            }} bg="brand.100">
+                            <Icon viewBox="0 0 512.005 512.005" fill="white" >
                               <path d="M505.749,475.587l-145.6-145.6c28.203-34.837,45.184-79.104,45.184-127.317c0-111.744-90.923-202.667-202.667-202.667
 			S0,90.925,0,202.669s90.923,202.667,202.667,202.667c48.213,0,92.48-16.981,127.317-45.184l145.6,145.6
 			c4.16,4.16,9.621,6.251,15.083,6.251s10.923-2.091,15.083-6.251C514.091,497.411,514.091,483.928,505.749,475.587z
@@ -107,16 +103,18 @@ function Nav() {
                     </FormControl>
                   </SimpleGrid>
                   <Text>{getValueAnimalById}</Text>
-
                   <Spacer />
-
                   <Box my={10} fontFamily="Montserrat">
-
-                    <Button name="button" colorScheme="teal" textTransform='uppercase' mr={5} mb={5} variant="outline">
+                    <Button name="button" _hover={{
+                      bg: "brand.100",
+                      color: "white",
+                    }} color="brand.100" borderColor="brand.100" textTransform='uppercase' mr={5} mb={5} variant="outline">
                       <Link to="/particulier">espace particulier</Link>
                     </Button>
-
-                    <Button name="button" colorScheme="teal" textTransform='uppercase' mr={5} variant="outline">
+                    <Button _hover={{
+                      bg: "brand.100",
+                      color: "white",
+                    }} color="brand.100" borderColor="brand.100" name="button" textTransform='uppercase' mr={5} variant="outline">
                       <Link to="/veterinaire">espace vétérinaire</Link>
                     </Button>
                   </Box>

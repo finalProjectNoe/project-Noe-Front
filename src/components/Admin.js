@@ -63,12 +63,11 @@ function Admin() {
               <Center>
                 <Heading fontFamily="Montserrat" mb={10}>Approuvre vétérinaire</Heading>
               </Center>
-
               <Center>
                 <FormControl>
                   <Stack my={10} >
                     <FormLabel htmlFor="approuve"></FormLabel>
-                    <Input id="approuve" value={inputValueAdressVet} onChange={(e) => { setInputValueAdressVet(e.currentTarget.value) }}
+                    <Input mb={20} id="approuve" value={inputValueAdressVet} onChange={(e) => { setInputValueAdressVet(e.currentTarget.value) }}
                       type="text" placeholder="Approuve vétérinaire" variant="filled" aria-label="approuve vétérinaire" />
                     <Button name="button" _hover={{
                       bg: "teal.500",
@@ -78,7 +77,6 @@ function Admin() {
                 </FormControl >
               </Center>
             </Box>
-
             <Box borderWidth="1px" p={50} borderRadius={5}>
               <Center>
                 <Heading fontFamily="Montserrat" mb={10}>Liste</Heading>
