@@ -25,7 +25,7 @@ function Home() {
               <Heading fontFamily="Montserrat" textAlign="center" size="3xl" my={10} as='h1'>Référencez votre NOE</Heading>
 
               <Text pt={10} mb={10} textAlign="center">
-                Grâce à Noe, vous gardez contact avec votre animal où qu’il soit. Nous œuvrons pour vous et vos petites boules de poils afin qu’elles ne soient jamais loin de vous, en sécurité et en bonne santé mais également identifiable même à distance.
+                Grâce à Noe, vous gardez contact avec votre animal où qu’il soit. Nous œuvrons pour vous et vos petites boules de poils afin qu’elles ne soient jamais loin de vous, en sécurité et en bonne santé mais également identifiables même à distance.
             </Text>
               <HStack spacing='24px' justifyContent='center'>
                 <SimpleGrid columns={[1, 1, 2]} spacing="40px" p={10}>

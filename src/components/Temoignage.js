@@ -15,14 +15,14 @@ function Temoignage() {
         <Box>
           <VStack spacing={10}>
             <Image borderRadius="full" boxSize="100px" objectFit="cover" src={Woman} alt="Avatar" />
-            <Text textAlign="center">Salut c'est moi bughy cela fait 2 ans que je suis dans la famille NOÉ tout ce passe très bien. Voilà pour les petites nouvelles, je vous en redonne tres vite.</Text>
+            <Text textAlign="center">Salut c'est moi Bughy cela fait 2 ans que je suis dans la famille NOÉ tout se passe très bien. Voilà pour les petites nouvelles, je vous en redonne tres vite.</Text>
             <Text fontWeight="bold">Alice DUPONT</Text>
           </VStack>
         </Box>
         <Box>
           <VStack spacing={10}>
             <Image borderRadius="full" boxSize="100px" objectFit="cover" src={Man} alt="Avatar" />
-            <Text textAlign="center">Voilà déjà 10 mois que nous sommes dans la famille NOÉ. Nous sommes en pleine forme, heureux d'être la et aussi de faire des bêtises ... Nous vous embrassons tous les NOÉ !!!</Text>
+            <Text textAlign="center">Voilà déjà 10 mois que nous sommes dans la famille NOÉ. Nous sommes en pleine forme, heureux d'être là et aussi de faire des bêtises ... Nous embrassons tous les NOÉ !!!</Text>
             <Text fontWeight="bold">Bob DUBOIS</Text>
           </VStack>
         </Box>

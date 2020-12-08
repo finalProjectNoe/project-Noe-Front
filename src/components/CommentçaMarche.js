@@ -16,14 +16,14 @@ function CommentçaMarche() {
           <VStack spacing={10}>
             <Image boxSize="100px" objectFit="cover" src={Dog} alt="dog" />
             <Text fontWeight="bold" fontSize="2xl">Inscription</Text>
-            <Text textAlign={"center"}>Commencez par connecté votre MetaMask avec le bouton start puis dirivez vous vers l'espace qui vous est dédié.</Text>
+            <Text textAlign={"center"}>Commencez par vous connecter à votre MetaMask avec le bouton start puis dirigez vous vers l'espace qui vous est dédié.</Text>
           </VStack>
         </Box>
         <Box>
           <VStack spacing={10}>
             <Image boxSize="100px" objectFit="cover" src={Cat} alt="cat" />
             <Text fontWeight="bold" textAlign={"center"} fontSize="2xl">Attribution de l’animal par votre vétérinaire</Text>
-            <Text textAlign={"center"}>Votre vétérinaire prend en charge de vous associer à votre animal.</Text>
+            <Text textAlign={"center"}>Votre vétérinaire se charge de vous associer à votre animal.</Text>
           </VStack>
         </Box>
         <Box>
@@ -31,7 +31,7 @@ function CommentçaMarche() {
             <Image boxSize="100px" objectFit="cover" src={Ferret} alt="ferret" />
             <Text textAlign={"center"} fontWeight="bold" fontSize="2xl">Connexion à votre espace</Text>
             <Center>
-              <Text textAlign={"center"}>En vous connectant à votre espace vous trouverez toute les infos vous concernant et vos animaux.</Text>
+              <Text textAlign={"center"}>En vous connectant à votre espace vous trouverez toutes les infos vous concernant vous et vos animaux.</Text>
             </Center>
           </VStack>
         </Box>
