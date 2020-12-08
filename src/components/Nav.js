@@ -52,19 +52,19 @@ function Nav() {
             <Image boxSize="100px" objectFit="cover" src={Logo} alt="logo noé" />
           </Link>
         </Box>
-        <Box py={3} my={10}>
-        <Text>MetaMask installed: {web3State.is_metamask ? 'yes' : 'no'}</Text>
-        </Box>
         <Spacer />
-        <Box my={10}>
-          {web3State.is_logged ? `✅ Connected wallet: ${wallet}`  : `🛑 Locked wallet: ${wallet}`}
+        <Box my={12} mx={6} as="samp" fontSize="12px">
+          {web3State.is_logged ? `✅ Connected wallet: ${web3State.is_metamask}`  : `🛑 Locked wallet: ${web3State.is_metamask}`}
           {!web3State.is_logged && (
-            <>
 
+
+            <>
+            <Box m={6}>
               <Button name="button" _hover={{
                 bg: "teal.500",
                 color: "white",
               }} bg="brand.100" color="white" textTransform='uppercase' mr={5} onClick={login}>Start</Button>
+              </Box>
             </>
           )}
         </Box>
