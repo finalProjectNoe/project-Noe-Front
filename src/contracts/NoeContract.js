@@ -1,5 +1,5 @@
 /* eslint-disable */
-export const Noe_address = '0x5d2eD3b3Cb45C875e2C27c79eCAF204fD6a08201'
+export const Noe_address = '0xE8462bE903177BF2E5621558C853d273EF3E9619'
 
 export const Noe_abi = [
   {
@@ -141,20 +141,6 @@ export const Noe_abi = [
     "type": "event"
   },
   {
-    "inputs": [],
-    "name": "animalsCount",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
     "inputs": [
       {
         "internalType": "address",
@@ -244,36 +230,6 @@ export const Noe_abi = [
       {
         "internalType": "bool",
         "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "name": "member",
-    "outputs": [
-      {
-        "internalType": "string",
-        "name": "name",
-        "type": "string"
-      },
-      {
-        "internalType": "uint256",
-        "name": "tel",
-        "type": "uint256"
-      },
-      {
-        "internalType": "bool",
-        "name": "isMember",
         "type": "bool"
       }
     ],
@@ -523,41 +479,6 @@ export const Noe_abi = [
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "name": "veterinary",
-    "outputs": [
-      {
-        "internalType": "string",
-        "name": "name",
-        "type": "string"
-      },
-      {
-        "internalType": "uint256",
-        "name": "tel",
-        "type": "uint256"
-      },
-      {
-        "internalType": "bool",
-        "name": "diploma",
-        "type": "bool"
-      },
-      {
-        "internalType": "bool",
-        "name": "isVeterinary",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
         "internalType": "string",
         "name": "_name",
         "type": "string"
@@ -600,48 +521,6 @@ export const Noe_abi = [
       }
     ],
     "name": "approveVeterinary",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_addr",
-        "type": "address"
-      },
-      {
-        "internalType": "string",
-        "name": "_name",
-        "type": "string"
-      }
-    ],
-    "name": "connectionMember",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_addr",
-        "type": "address"
-      },
-      {
-        "internalType": "string",
-        "name": "_name",
-        "type": "string"
-      }
-    ],
-    "name": "connectionVeterinary",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
