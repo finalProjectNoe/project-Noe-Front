@@ -14,7 +14,6 @@ import AjoutAnimal from './components/espace_veterinaire/AjoutAnimal'
 function Dapp() {
   return (
     <Router>
-
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/veterinaire" exact component={LoginVeterinaire} />
