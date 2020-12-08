@@ -3,7 +3,7 @@ export const isWeb3 = () => {
 }
 
 export const isMetaMask = () => {
-  return window.ethereum.isMetaMask ? true : false
+  return window.ethereum.isMetaMask ? 'MetaMask' : 'Other wallet'
 }
 
 // return account if connected

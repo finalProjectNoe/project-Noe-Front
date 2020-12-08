@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Text, Box, VStack, SimpleGrid, Image, Center } from '@chakra-ui/core'
+import { Heading, Text, Box, SimpleGrid, Image, Center } from '@chakra-ui/core'
 import NavParticulier from './NavParticulier'
 import Footer from '../Footer'
 import Man from '../../assets/man.svg'
@@ -13,69 +13,43 @@ function ProfilParticulier() {
       <Center>
         <Heading fontFamily="Montserrat" mt={10} as="h2">Mon espace</Heading>
       </Center>
-      <Box p={20} fontFamily="Montserrat">
-
-        <SimpleGrid columns={[1, 1, 4]} spacing="40px" p={20} fontFamily="Montserrat" borderWidth="1px">
-
+      <Box py={20} px={250} fontFamily="Montserrat">
+        <SimpleGrid columns={[1, 1, 3]} spacing="40px" p={20} fontFamily="Montserrat" borderWidth="1px" bg='brand.900' color='white' borderRadius={5}>
           <Box>
-            <VStack>
-              <Image borderRadius="full" boxSize="100px" objectFit="cover" src={Man} alt="avatar particulier" />
-            </VStack>
+            <Image borderRadius="full" boxSize="100px" objectFit="cover" src={Man} alt="avatar particulier" />
           </Box>
-
           <Box >
-            <VStack>
-              <Text>Nom</Text>
-              <Text >Téléphone</Text>
-            </VStack>
+            <Text fontWeight="bold" pb={10}>Nom:</Text>
+            <Text fontWeight="bold" >Téléphone:</Text>
           </Box>
-
           <Box>
-            <VStack>
-              <Text>Adresse ETH</Text>
-            </VStack>
+            <Text fontWeight="bold">Adresse ETH:</Text>
           </Box>
-
         </SimpleGrid>
       </Box>
       <Center>
-        <Heading pt={20} fontFamily="Montserrat" as="h2">Mes animaux</Heading>
+        <Heading mt={20} fontFamily="Montserrat" as="h2">Mes animaux</Heading>
       </Center>
-      <Box p={20} fontFamily="Montserrat">
-
-        <SimpleGrid columns={[1, 1, 5]} spacing="40px" p={20} fontFamily="Montserrat" borderWidth="1px">
-
+      <Box py={20} px={250} fontFamily="Montserrat">
+        <SimpleGrid columns={[1, 1, 4]} spacing="40px" p={20} fontFamily="Montserrat" borderWidth="1px" borderRadius={5}>
           <Box>
-            <VStack>
-              <Image borderRadius="full" boxSize="100px" objectFit="cover" src={cat_profil} alt="avatar animal" />
-              <Text>Nom</Text>
-            </VStack>
-          </Box>
+            <Image mb={10} borderRadius="full" boxSize="100px" objectFit="cover" src={cat_profil} alt="avatar animal" />
 
+          </Box>
           <Box>
-            <VStack>
-              <Text>ID</Text>
-              <Text>Sexe</Text>
-            </VStack>
+            <Text fontWeight="bold" pb={10}>ID</Text>
+            <Text fontWeight="bold">Nom:</Text>
           </Box>
-
           <Box>
-            <VStack>
-              <Text textAlign="center">Date de naissance</Text>
-              <Text>Type</Text>
-            </VStack>
+            <Text fontWeight="bold" pb={10}>Date de naissance:</Text>
+            <Text fontWeight="bold">Sexe:</Text>
           </Box>
-
           <Box>
-            <VStack>
-              <Text textAlign="center">Vaccin</Text>
-            </VStack>
+            <Text pb={10} fontWeight="bold">Vaccin:</Text>
+            <Text fontWeight="bold">Type:</Text>
           </Box>
-
         </SimpleGrid>
-
       </Box>
-
       <Footer />
     </>
   )

@@ -26,11 +26,9 @@ function NavParticulier() {
           </Link>
         </Box>
         <Spacer />
-
         <Button name="button" variant="link" ref={btnRef} onClick={onOpen} size="sm" py={10} mr={10} >
           <Image boxSize="25px" src={Burger} alt="menu" />
         </Button>
-
         <Drawer
           isOpen={isOpen}
           placement="right"
@@ -42,17 +40,15 @@ function NavParticulier() {
               <DrawerCloseButton />
               <DrawerBody>
                 <Box py={10} fontFamily="Montserrat">
-
-                  <Button name="button" mr={5} colorScheme="teal" textTransform='uppercase' variant="link">
+                  <Button name="button" mr={5} color="brand.900" textTransform='uppercase' variant="link">
                     <Link to="/profil_particulier">Mon espace</Link>
                   </Button>
                 </Box>
                 <Box fontFamily="Montserrat">
-                  <Button name="button" mr={5} colorScheme="teal" textTransform='uppercase' variant="link">
+                  <Button name="button" mr={5} color="brand.900" textTransform='uppercase' variant="link">
                     <Link to="/">Deconnexion</Link>
                   </Button>
                 </Box>
-
               </DrawerBody>
             </DrawerContent>
           </DrawerOverlay>

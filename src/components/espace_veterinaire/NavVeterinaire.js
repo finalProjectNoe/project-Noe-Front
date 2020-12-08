@@ -31,7 +31,6 @@ function NavVeteinaire() {
         <Button name="button" variant="link" ref={btnRef} onClick={onOpen} size="sm" py={10} mr={10} >
           <Image boxSize="25px" src={Burger} alt="menu" />
         </Button>
-
         <Drawer
           isOpen={isOpen}
           placement="right"
@@ -43,11 +42,12 @@ function NavVeteinaire() {
               <DrawerCloseButton />
               <DrawerBody>
                 <Box py={10}>
-
                   <SimpleGrid py={5} mb={10}>
                     <FormControl >
                       <InputGroup>
-                        <Input id="search" size="md" type="search" variant="outline" placeholder="Recherche animaux" />
+                        <Input _hover={{
+                          color: "brand.900",
+                        }} borderColor="brand.100" id="search" size="md" type="search" variant="outline" placeholder="Recherche animaux" />
                         <Center>
                           <Button name="button" _hover={{
                             bg: "teal.500",
@@ -69,12 +69,12 @@ function NavVeteinaire() {
                   <Divider borderWidth="1px" />
                   <Box my={10} fontFamily="Montserrat">
 
-                    <Button name="button" mr={5} colorScheme="teal" textTransform='uppercase' variant="link">
+                    <Button name="button" mr={5} color="brand.900" textTransform='uppercase' variant="link">
                       <Link to="/profil_veterinaire">Mon espace</Link>
                     </Button>
                   </Box>
                   <Box fontFamily="Montserrat">
-                    <Button name="button" mr={5} colorScheme="teal" textTransform='uppercase' variant="link">
+                    <Button name="button" mr={5} color="brand.900" textTransform='uppercase' variant="link">
                       <Link to="/">Deconnexion</Link>
                     </Button>
                   </Box>
