@@ -13,7 +13,7 @@ function Profilveterinaire() {
         <Heading fontFamily="Montserrat" pt={10} as="h2">Mon espace</Heading>
       </Center>
       <Box py={20} px={250} fontFamily="Montserrat" mb={150}>
-        <SimpleGrid columns={[1, 1, 3]} spacing="40px" p={20} fontFamily="Montserrat" borderWidth="1px" bg='brand.900' color='white'>
+        <SimpleGrid columns={[1, 1, 3]} spacing="40px" p={20} fontFamily="Montserrat" borderWidth="1px" bg='brand.900' color='white' borderRadius={5}>
           <Box>
             <Image borderRadius="full" boxSize="100px" objectFit="cover" src={Woman} alt="avatar" />
           </Box>

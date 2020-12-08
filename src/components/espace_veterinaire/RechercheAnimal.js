@@ -21,21 +21,22 @@ function RechercheAnimal() {
         </Button>
       </Flex>
       <Box py={20} px={250} fontFamily="Montserrat">
-        <SimpleGrid columns={[1, 1, 5]} spacing="40px" p={20} borderWidth="1px" borderColor="brand.900" >
+        <SimpleGrid columns={[1, 1, 5]} spacing="40px" p={20} borderWidth="1px" borderRadius={5}>
           <Box>
             <Image mb={10} borderRadius="full" boxSize="100px" objectFit="cover" src={cat_profil} alt="avatar animal" />
-            <Text ml={7} fontWeight="bold">Nom:</Text>
+
           </Box>
           <Box>
             <Text fontWeight="bold" pb={10}>ID</Text>
-            <Text fontWeight="bold">Sexe:</Text>
+            <Text fontWeight="bold">Nom:</Text>
           </Box>
           <Box>
             <Text fontWeight="bold" pb={10}>Date de naissance:</Text>
-            <Text fontWeight="bold">Type:</Text>
+            <Text fontWeight="bold">Sexe:</Text>
           </Box>
           <Box>
-            <Text fontWeight="bold">Vaccin:</Text>
+            <Text pb={10} fontWeight="bold">Vaccin:</Text>
+            <Text fontWeight="bold">Type:</Text>
           </Box>
           <Box>
             <Button name="button" _hover={{
