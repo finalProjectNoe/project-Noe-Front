@@ -13,17 +13,18 @@ const theme = extendTheme({
       100: '#246A73',
       900: '#008485'
     },
-    bad: {
+    beige: {
       100: '#F3DFC1',
-    },
-    purple: {
-      100: '#0B2027',
     },
   },
 
   style: {
-    fontFamily: 'Montserrat, sans-serif',
-  }
+    global: {
+      "html, body": {
+        fontFamily: 'Montserrat, sans-serif',
+      },
+    },
+  },
 })
 
 ReactDOM.render(
