@@ -1,5 +1,5 @@
 /* eslint-disable */
-export const Noe_address = '0xa54488dB54359B2c2C767322eb7F07EB7A246f28'
+export const Noe_address = '0xE8462bE903177BF2E5621558C853d273EF3E9619'
 
 export const Noe_abi = [
   {
