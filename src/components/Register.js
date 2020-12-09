@@ -1,26 +1,27 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, } from 'react'
 import { Center, Button, Stack, Input, Heading, FormControl, Box, SimpleGrid, VStack, FormLabel } from '@chakra-ui/core'
 // import { Link } from 'react-router-dom';
-import Nav from '../Nav'
-import Footer from '../Footer'
-import { NoeContext } from '../../App'
+import Nav from './Nav'
+import Footer from './Footer'
+import { NoeContext } from '../App'
 
-function LoginVeterinaire() {
+
+function Register() {
 
   const noe = useContext(NoeContext)
 
   const [inputValueName, setInputValueName] = useState(null)
   const [inputValuePhoneNumber, setInputValuePhoneNumber] = useState(null)
-  const [inputValueAdressVet, setInputValueAdressVet] = useState(null)
-  const [inputValueNameCoVet, setInputValueNameCoVet] = useState(null)
+  const [inputValueNameMember, setInputValueNameMember] = useState(null)
+  const [inputValuePhoneMember, setInputValuePhoneMember] = useState(null)
 
+
+  const handleOnClickCreateMember = async () => {
+    const CMTX1 = await noe.createMember(inputValueNameMember, inputValuePhoneMember)
+  }
 
   const handleOnClickCreateVeterinary = async () => {
     const CVTX1 = await noe.createVeterinary(inputValueName, inputValuePhoneNumber)
-  }
-
-  const handleOnClickConnectionVeterinary = async () => {
-    const CVTX2 = await noe.connectionVeterinary(inputValueAdressVet, inputValueNameCoVet)
   }
 
   return (
@@ -52,20 +53,20 @@ function LoginVeterinaire() {
             </Box>
             <Box borderWidth="1px" p={50} borderRadius={5}>
               <Center>
-                <Heading fontFamily="Montserrat" mb={10}>Connexion</Heading>
+                <Heading fontFamily="Montserrat" mb={10}>Inscription Particuliers</Heading>
               </Center>
-              <FormControl isRequired>
+              <FormControl isRequired >
                 <Stack >
-                  <FormLabel pt={10} htmlFor="adresse-ETH" >ETH</FormLabel>
-                  <Input id="adresse-ETH" value={inputValueAdressVet} onChange={(e) => { setInputValueAdressVet(e.currentTarget.value) }}
-                    variant="filled" placeholder="Adresse ETH" />
-                  <FormLabel pt={10} htmlFor="Nom">Nom</FormLabel>
-                  <Input mb={20} id="Nom" value={inputValueNameCoVet} onChange={(e) => { setInputValueNameCoVet(e.currentTarget.value) }}
-                    variant="filled" placeholder="Nom" />
-                  <Button _hover={{
+                  <FormLabel htmlFor="nom" pt={10}>Nom</FormLabel>
+                  <Input id="nom" value={inputValueNameMember} onChange={(e) => { setInputValueNameMember(e.currentTarget.value) }}
+                    variant="filled" placeholder="Nom" aria-label="Nom" />
+                  <FormLabel htmlFor="mobile" pt={10}>Mobile</FormLabel>
+                  <Input mb={20} id="mobile" value={inputValuePhoneMember} onChange={(e) => { setInputValuePhoneMember(e.currentTarget.value) }}
+                    variant="filled" placeholder="Mobile" aria-label="Mobile" />
+                  <Button name="button" _hover={{
                     bg: "teal.500",
                     color: "white",
-                  }} bg="brand.900" color="white" name="button" textTransform='uppercase' onClick={handleOnClickConnectionVeterinary}>Connexion</Button>
+                  }} bg="brand.900" color="white" onClick={handleOnClickCreateMember} textTransform='uppercase' >Inscription</Button>
                 </Stack>
               </FormControl >
             </Box>
@@ -77,4 +78,4 @@ function LoginVeterinaire() {
   )
 }
 
-export default LoginVeterinaire
+export default Register
