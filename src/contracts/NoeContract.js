@@ -17,7 +17,7 @@ export const Noe_abi = [
     "anonymous": false,
     "inputs": [
       {
-        "indexed": false,
+        "indexed": true,
         "internalType": "address",
         "name": "_address",
         "type": "address"
@@ -80,7 +80,7 @@ export const Noe_abi = [
     "anonymous": false,
     "inputs": [
       {
-        "indexed": false,
+        "indexed": true,
         "internalType": "address",
         "name": "_address",
         "type": "address"
@@ -118,7 +118,7 @@ export const Noe_abi = [
     "anonymous": false,
     "inputs": [
       {
-        "indexed": false,
+        "indexed": true,
         "internalType": "address",
         "name": "_address",
         "type": "address"
@@ -131,7 +131,7 @@ export const Noe_abi = [
     "anonymous": false,
     "inputs": [
       {
-        "indexed": false,
+        "indexed": true,
         "internalType": "address",
         "name": "_address",
         "type": "address"
@@ -484,9 +484,9 @@ export const Noe_abi = [
         "type": "string"
       },
       {
-        "internalType": "uint256",
+        "internalType": "string",
         "name": "_tel",
-        "type": "uint256"
+        "type": "string"
       }
     ],
     "name": "createMember",
@@ -497,20 +497,99 @@ export const Noe_abi = [
   {
     "inputs": [
       {
+        "internalType": "address",
+        "name": "_addr",
+        "type": "address"
+      }
+    ],
+    "name": "getMember",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "tel",
+            "type": "string"
+          },
+          {
+            "internalType": "bool",
+            "name": "isMember",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct Noe.Member",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [
+      {
         "internalType": "string",
         "name": "_name",
         "type": "string"
       },
       {
-        "internalType": "uint256",
+        "internalType": "string",
         "name": "_tel",
-        "type": "uint256"
+        "type": "string"
       }
     ],
     "name": "createVeterinary",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_addr",
+        "type": "address"
+      }
+    ],
+    "name": "getVeterinary",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "tel",
+            "type": "string"
+          },
+          {
+            "internalType": "bool",
+            "name": "diploma",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "isVeterinary",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct Noe.Veterinary",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
   },
   {
     "inputs": [
