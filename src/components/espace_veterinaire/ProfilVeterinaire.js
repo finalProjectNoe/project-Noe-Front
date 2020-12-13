@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Text, Box, VStack, SimpleGrid, Image, Center } from '@chakra-ui/core'
+import { Heading, Text, Box, Input, SimpleGrid, Image, Center } from '@chakra-ui/core'
 import Footer from '../Footer'
 import NavVeteinaire from './NavVeterinaire'
 import Woman from '../../assets/girl.svg'
@@ -12,18 +12,22 @@ function Profilveterinaire() {
       <Center>
         <Heading fontFamily="Montserrat" pt={10} as="h2">Mon espace</Heading>
       </Center>
-      <Box py={20} px={250} fontFamily="Montserrat" mb={150}>
-        <SimpleGrid columns={[1, 1, 3]} spacing="40px" p={20} fontFamily="Montserrat" borderWidth="1px" bg='brand.900' color='white' borderRadius={5}>
+      <Box fontFamily="Montserrat" mb={150}>
+        <SimpleGrid my={20} mx={20} columns={[1, 1, 3]} spacing="40px" p={30} fontFamily="Montserrat" borderWidth="1px" bg='brand.900' color='white' borderRadius={5}>
           <Box>
-            <Image borderRadius="full" boxSize="100px" objectFit="cover" src={Woman} alt="avatar" />
+            <Image mb={10} borderRadius="full" boxSize="100px" objectFit="cover" src={Woman} alt="avatar" />
           </Box>
           <Box>
-            <Text fontWeight="bold" pb={10}>Nom: </Text>
-            <Text fontWeight="bold" >Téléphone:</Text>
+            <Text fontWeight="bold">Nom :</Text>
+            <Input mb={20} />
+            <Text fontWeight="bold">Téléphone :</Text>
+            <Input />
           </Box>
           <Box>
-            <Text pb={10} fontWeight="bold">Adresse ETH:</Text>
-            <Text fontWeight="bold">Diplome:</Text>
+            <Text fontWeight="bold">Adresse ETH :</Text>
+            <Input mb={20} />
+            <Text fontWeight="bold">Diplome :</Text>
+            <Input />
           </Box>
         </SimpleGrid>
       </Box>

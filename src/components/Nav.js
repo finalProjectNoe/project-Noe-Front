@@ -24,16 +24,13 @@ import {
 } from "@chakra-ui/core"
 import { NoeContext } from '../App'
 import { Web3Context } from '../hooks/useWeb3'
-var Web3 = require('web3');
+
 
 
 
 
 
 function Nav() {
-
-  const wallet = new Web3(Web3.givenProvider)
-  console.log(Web3.givenProvider)
 
   const noe = useContext(NoeContext)
   const [web3State, login] = useContext(Web3Context)

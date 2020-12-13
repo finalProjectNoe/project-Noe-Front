@@ -1,5 +1,5 @@
-import React from 'react'
-import { Button, Box, Divider, Input, FormControl, Image, Flex, Center, Spacer, InputGroup, SimpleGrid } from '@chakra-ui/core'
+import React, { useContext, useState } from 'react'
+import { Button, Box, Divider, Input, FormControl, Image, Flex, Center, Spacer, InputGroup, SimpleGrid, Text } from '@chakra-ui/core'
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png'
 import Burger from '../../assets/menu.svg'
@@ -12,11 +12,31 @@ import {
   useDisclosure,
   Icon
 } from "@chakra-ui/core"
+import { NoeContext } from '../../App'
+var Web3 = require('web3');
 
 function NavVeteinaire() {
 
+
+  const wallet = new Web3(Web3.givenProvider)
+  console.log(Web3.givenProvider)
+
+  const noe = useContext(NoeContext)
+
+  const [inputAnimalById, setInputAnimalById] = useState(null)
+  const [getValueAnimalById, setGetValueAnimalById] = useState(null)
+
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
+
+  const handleOnClickGetAnimalByID = async () => {
+    try {
+      const res = await noe.getAnimalById(inputAnimalById)
+      console.log(res)
+      setGetValueAnimalById(res.toString())
+    } catch (e) {
+    }
+  }
 
   return (
     <>
@@ -47,9 +67,9 @@ function NavVeteinaire() {
                       <InputGroup>
                         <Input _hover={{
                           color: "brand.900",
-                        }} borderColor="brand.100" id="search" size="md" type="search" variant="outline" placeholder="Recherche animaux" />
+                        }} value={inputAnimalById} onChange={(e) => { setInputAnimalById(e.currentTarget.value) }} borderColor="brand.100" id="search" size="md" type="search" variant="outline" placeholder="Recherche animaux" />
                         <Center>
-                          <Button name="button" _hover={{
+                          <Button onClick={handleOnClickGetAnimalByID} name="button" _hover={{
                             bg: "teal.500",
                             fill: "white",
                           }} bg="brand.100" fill="white">
@@ -64,7 +84,7 @@ function NavVeteinaire() {
                       </InputGroup>
                     </FormControl>
                   </SimpleGrid>
-
+                  <Text>{getValueAnimalById}</Text>
                   <Spacer />
                   <Divider borderWidth="1px" />
                   <Box my={10} fontFamily="Montserrat">
