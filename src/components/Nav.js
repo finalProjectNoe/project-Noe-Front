@@ -25,6 +25,7 @@ import { NoeContext } from '../App'
 import { Web3Context } from "web3-hooks"
 
 
+
 function Nav() {
 
   const noe = useContext(NoeContext)

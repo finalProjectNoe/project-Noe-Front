@@ -4,6 +4,11 @@ import NavParticulier from './NavParticulier'
 import Footer from '../Footer'
 import Man from '../../assets/man.svg'
 import cat_profil from '../../assets/cat_profil.svg'
+import { NoeContext } from '../../App'
+
+
+
+
 
 
 

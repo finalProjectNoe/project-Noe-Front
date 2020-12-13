@@ -1,7 +1,7 @@
 import React from 'react'
 import Home from './components/Home'
 import ProfilParticuliers from './components/espace_particulier/ProfilParticulier'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, } from "react-router-dom";
 import ProfilVeterinaire from './components/espace_veterinaire/ProfilVeterinaire'
 import Admin from './components/Admin'
 import AjoutAnimal from './components/espace_veterinaire/AjoutAnimal'
