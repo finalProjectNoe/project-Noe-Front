@@ -1,6 +1,7 @@
+// in progress
+
 import React from 'react'
 import { Center, Button, Stack, Input, Heading, FormControl, Box, SimpleGrid, VStack, FormLabel, Select } from '@chakra-ui/core'
-// import { Link } from 'react-router-dom';
 import Footer from '../Footer'
 import NavVeteinaire from './NavVeterinaire'
 

@@ -3,7 +3,6 @@ import { Button, Box, Flex, Divider, Image, Spacer, Input, FormControl, Center, 
 import { Link } from 'react-router-dom';
 import Logo from '../assets/logo.png'
 import Burger from '../assets/menu.svg'
-//import { ethers } from 'ethers'
 import {
   Drawer,
   DrawerOverlay,
@@ -23,17 +22,10 @@ import {
   PopoverCloseButton,
 } from "@chakra-ui/core"
 import { NoeContext } from '../App'
-import { Web3Context } from '../hooks/useWeb3'
-var Web3 = require('web3');
-
-
-
+import { Web3Context } from "web3-hooks"
 
 
 function Nav() {
-
-  const wallet = new Web3(Web3.givenProvider)
-  console.log(Web3.givenProvider)
 
   const noe = useContext(NoeContext)
   const [web3State, login] = useContext(Web3Context)
@@ -75,16 +67,16 @@ function Nav() {
               <PopoverContent>
                 <PopoverArrow />
                 <PopoverBody>
-                  <Text fontWeight='bold'>Web3: {web3State.is_web3 ? (<Text color="green.500">injected ✅ </Text>
+                  <Text fontWeight='bold'>Web3: {web3State.isWeb3 ? (<Text color="green.500">injected ✅ </Text>
                   ) : (
                       <Text color="red.500">not found 🛑 </Text>
                     )}</Text>
-                  <Text fontWeight='bold'>Wallet: {web3State.is_logged ?
-                    <Text color="green.500">{web3State.is_metamask} ✅ </Text>
+                  <Text fontWeight='bold'>Wallet: {web3State.isLogged ?
+                    <Text color="green.500">{web3State.isMetamask} Connected ✅ </Text>
                     :
-                    <Text color="red.500">{web3State.is_metamask} 🛑 </Text>}</Text>
-                  <Text fontWeight='bold'>Network name: {web3State.network_name}</Text>
-                  <Text fontWeight='bold'>Network id: {web3State.chain_id}</Text>
+                    <Text color="red.500">{web3State.isMetamask} Disconnected 🛑 </Text>}</Text>
+                  <Text fontWeight='bold'>Network name: {web3State.networkName}</Text>
+                  <Text fontWeight='bold'>Network id: {web3State.chainId}</Text>
                   <Text fontWeight='bold'>Account: {web3State.account}</Text>
                   <Text fontWeight='bold'>Balance: {web3State.balance}</Text>
                 </PopoverBody>
@@ -93,7 +85,7 @@ function Nav() {
             </Portal>
           </Popover>
 
-          {!web3State.is_logged && (
+          {!web3State.isLogged && (
 
             <Button ml={10} name="button" _hover={{
               bg: "teal.500",
@@ -103,7 +95,7 @@ function Nav() {
           )}
 
         </Box>
-        {NoeContext !== null && web3State.chain_id === 4 && (
+        {NoeContext !== null && web3State.chainId === 4 && (
           <>
             <Button name="button" variant="link" ref={btnRef} onClick={onOpen} size="sm" py={10} mr={10} >
               <Image boxSize="25px" src={Burger} alt="menu burger" />
@@ -150,13 +142,7 @@ function Nav() {
                           bg: "brand.100",
                           color: "white",
                         }} color="brand.100" borderColor="brand.100" textTransform='uppercase' mr={5} mb={5} variant="outline">
-                          <Link to="/register">espace particulier</Link>
-                        </Button>
-                        <Button _hover={{
-                          bg: "brand.100",
-                          color: "white",
-                        }} color="brand.100" borderColor="brand.100" name="button" textTransform='uppercase' mr={5} variant="outline">
-                          <Link to="/register">espace vétérinaire</Link>
+                          <Link to="/register">espace inscription</Link>
                         </Button>
                       </Box>
                     </Box>

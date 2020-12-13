@@ -37,9 +37,9 @@ function AjoutAnimal() {
                   <FormLabel htmlFor="ETH" pt={5}>ETH</FormLabel>
                   <Input value={inputValueAddAdress} onChange={(e) => { setInputValueAddAdress(e.currentTarget.value) }}
                     id='ETH' variant="filled" placeholder="Adresse ETH" aria-label="ETH" />
-                  <FormLabel htmlFor="ETH" pt={5}>Nom</FormLabel>
+                  <FormLabel htmlFor="nom" pt={5}>Nom</FormLabel>
                   <Input value={inputValueAddName} onChange={(e) => { setInputValueAddName(e.currentTarget.value) }}
-                    id='ETH' variant="filled" placeholder="nom" aria-label="nom" />
+                    id='nom' variant="filled" placeholder="nom" aria-label="nom" />
                   <FormLabel htmlFor="Date" pt={5}>Date de naissance</FormLabel>
                   <Input value={inputValueAddDate} onChange={(e) => { setInputValueAddDate(e.currentTarget.value) }}
                     id='sexe' variant="filled" placeholder="Date de naissance" aria-label="Date de naissance" />
