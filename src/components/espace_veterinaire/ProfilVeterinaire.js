@@ -16,12 +16,12 @@ function Profilveterinaire() {
             <Heading fontFamily="Montserrat" as="h2">Mon espace</Heading>
           </Center>
         </Box>
-        <Box>
+        <Box fontFamily="Montserrat">
           <Center>
             <Button name="button" _hover={{
               bg: "brand.100",
               color: "white",
-            }} color="brand.100" borderColor="brand.100" variant="outline">
+            }} color="brand.100" borderColor="brand.100" variant="outline" textTransform='uppercase'>
               <Link to="/ajout_animal">Ajouter</Link>
             </Button>
           </Center>
@@ -34,15 +34,15 @@ function Profilveterinaire() {
           </Box>
           <Box>
             <Text fontWeight="bold">Nom :</Text>
-            <Input id="nom" aria-label="nom" isDisabled mb={20} />
+            <Input id="nom" aria-label="nom" isDisabled mb={20} variant="unstyled" />
             <Text fontWeight="bold">Téléphone :</Text>
-            <Input id="tel" aria-label="tel" isDisabled />
+            <Input id="tel" aria-label="tel" isDisabled variant="unstyled" />
           </Box>
           <Box>
             <Text fontWeight="bold">Adresse ETH :</Text>
-            <Input id="ETH" aria-label="ETH" isDisabled mb={20} />
+            <Input id="ETH" aria-label="ETH" isDisabled mb={20} variant="unstyled" />
             <Text fontWeight="bold">Diplome :</Text>
-            <Input id="diplome" aria-label="diplome" isDisabled />
+            <Input id="diplome" aria-label="diplome" isDisabled variant="unstyled" />
           </Box>
         </SimpleGrid>
       </Box>
