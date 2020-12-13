@@ -4,18 +4,9 @@ import NavParticulier from './NavParticulier'
 import Footer from '../Footer'
 import Man from '../../assets/man.svg'
 import cat_profil from '../../assets/cat_profil.svg'
-import { NoeContext } from '../../App'
-
-
-
-
-
-
-
 
 
 function ProfilParticulier() {
-
 
   return (
     <>
@@ -30,13 +21,13 @@ function ProfilParticulier() {
           </Box>
           <Box>
             <Text fontWeight="bold">Nom :</Text>
-            <Input id="nom" aria-label="nom" isDisabled mb={20}></Input>
+            <Input id="nom" aria-label="nom" isDisabled mb={20} variant="unstyled" />
             <Text fontWeight="bold">Téléphone :</Text>
-            <Input id="tel" aria-label="tel" isDisabled />
+            <Input id="tel" aria-label="tel" isDisabled variant="unstyled" />
           </Box>
           <Box>
             <Text fontWeight="bold">Adresse ETH :</Text>
-            <Input id="ETH" aria-label="ETH" isDisabled mb={20} />
+            <Input id="ETH" aria-label="ETH" isDisabled mb={20} variant="unstyled" />
           </Box>
         </SimpleGrid>
       </Box>
@@ -50,21 +41,21 @@ function ProfilParticulier() {
           </Box>
           <Box>
             <Text fontWeight="bold">ID</Text>
-            <Input id="id" aria-label="id" isDisabled mb={20} />
+            <Input id="id" aria-label="id" isDisabled mb={20} variant="unstyled" />
             <Text fontWeight="bold">Nom:</Text>
-            <Input id="name" aria-label="name" isDisabled />
+            <Input id="name" aria-label="name" isDisabled variant="unstyled" />
           </Box>
           <Box>
             <Text fontWeight="bold">Date de naissance:</Text>
-            <Input id="date" aria-label="date" isDisabled mb={20} />
+            <Input id="date" aria-label="date" isDisabled mb={20} variant="unstyled" />
             <Text fontWeight="bold">Sexe:</Text>
-            <Input id="sex" aria-label="sex" isDisabled />
+            <Input id="sex" aria-label="sex" isDisabled variant="unstyled" />
           </Box>
           <Box>
             <Text fontWeight="bold">Vaccin:</Text>
-            <Input id="vaccin" aria-label="vaccin" isDisabled mb={20} />
+            <Input id="vaccin" aria-label="vaccin" isDisabled mb={20} variant="unstyled" />
             <Text fontWeight="bold">Type:</Text>
-            <Input id="type" aria-label="type" isDisabled />
+            <Input id="type" aria-label="type" isDisabled variant="unstyled" />
           </Box>
         </SimpleGrid>
       </Box>
