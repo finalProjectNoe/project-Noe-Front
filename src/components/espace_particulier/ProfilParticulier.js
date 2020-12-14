@@ -38,8 +38,8 @@ function ProfilParticulier() {
             <Image mb={10} borderRadius="full" boxSize="100px" objectFit="cover" src={Man} alt="avatar" />
           </Box>
           <Box>
-            <Text mb={20} fontWeight="bold">Nom :</Text>
-            <Input id="tel" aria-label="tel" isDisabled variant="unstyled" value={name} />
+            <Text fontWeight="bold">Nom :</Text>
+            <Input mb={20} id="tel" aria-label="tel" isDisabled variant="unstyled" value={name} />
             <Text fontWeight="bold">Téléphone :</Text>
             <Input id="tel" aria-label="tel" isDisabled variant="unstyled" value={tel} />
           </Box>
