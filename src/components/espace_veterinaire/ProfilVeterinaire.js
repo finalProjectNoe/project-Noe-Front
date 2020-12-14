@@ -1,11 +1,31 @@
-import React from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import { Heading, Text, Box, Input, SimpleGrid, Image, Center, Button } from '@chakra-ui/core'
 import { Link } from 'react-router-dom';
+import { NoeContext } from '../../App'
 import Footer from '../Footer'
 import NavVeteinaire from './NavVeterinaire'
 import Woman from '../../assets/girl.svg'
+import { Web3Context } from "web3-hooks"
 
 function Profilveterinaire() {
+  const noe = useContext(NoeContext)
+  const [web3State, login] = useContext(Web3Context)
+  
+  const [name, setName] = useState();
+  const [tel, setTel] = useState();
+  const [diploma, setDiploma] = useState();
+
+  useEffect(() => {
+    (async() => {
+      if(noe !== null) {
+      const vetInfo = await noe.getVeterinary()
+      setName(vetInfo[0])
+      setTel(vetInfo[1])
+      setDiploma(vetInfo[2])
+      }
+    })()
+    
+  }, [noe, web3State.account])
 
   return (
     <>
@@ -34,15 +54,15 @@ function Profilveterinaire() {
           </Box>
           <Box>
             <Text fontWeight="bold">Nom :</Text>
-            <Input id="nom" aria-label="nom" isDisabled mb={20} variant="unstyled" />
+            <Input id="nom" aria-label="nom" isDisabled mb={20} variant="unstyled" value={name} />
             <Text fontWeight="bold">Téléphone :</Text>
-            <Input id="tel" aria-label="tel" isDisabled variant="unstyled" />
+            <Input id="tel" aria-label="tel" isDisabled variant="unstyled" value={tel}/>
           </Box>
           <Box>
             <Text fontWeight="bold">Adresse ETH :</Text>
-            <Input id="ETH" aria-label="ETH" isDisabled mb={20} variant="unstyled" />
+            <Input id="ETH" aria-label="ETH" isDisabled mb={20} variant="unstyled" value={web3State.account}/>
             <Text fontWeight="bold">Diplome :</Text>
-            <Input id="diplome" aria-label="diplome" isDisabled variant="unstyled" />
+            <Input id="diplome" aria-label="diplome" isDisabled variant="unstyled" value={diploma} />
           </Box>
         </SimpleGrid>
       </Box>
