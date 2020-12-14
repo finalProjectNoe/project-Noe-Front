@@ -1,14 +1,20 @@
-import React, { useContext, useState, } from 'react'
+import React, { useContext, useState } from 'react'
 import { Center, Button, Stack, Input, Heading, FormControl, Box, SimpleGrid, VStack, FormLabel } from '@chakra-ui/core'
 // import { Link } from 'react-router-dom';
 import Nav from './Nav'
 import Footer from './Footer'
 import { NoeContext } from '../App'
+import { Web3Context } from '../hooks/useWeb3'
+import { useHistory } from "react-router-dom"
+ 
 
 
 function Register() {
 
+  const [web3State, login] = useContext(Web3Context);
   const noe = useContext(NoeContext)
+  // const toast = useToast()
+  const history = useHistory()
 
   const [inputValueName, setInputValueName] = useState(null)
   const [inputValuePhoneNumber, setInputValuePhoneNumber] = useState(null)
@@ -17,12 +23,54 @@ function Register() {
 
 
   const handleOnClickCreateMember = async () => {
+    try {
     const CMTX1 = await noe.createMember(inputValueNameMember, inputValuePhoneMember)
+      const cb = () => {
+        history.push("/profil_particulier")
+        
+      }
+      const filter = noe.filters.MemberCreated(web3State.account)
+      noe.once(filter, cb)
+  } catch (e) {
+
   }
+}
 
   const handleOnClickCreateVeterinary = async () => {
+    try {
     const CVTX1 = await noe.createVeterinary(inputValueName, inputValuePhoneNumber)
+    const cb = () => {
+      history.push("/profil_veterinaire")
+      
+    }
+    const filter = noe.filters.VeterinaryCreated(web3State.account)
+    noe.once(filter, cb)
+} catch (e) {
+
+}
   }
+
+
+  // useEffect(() => {
+  //   if (noe) {
+  //     const cb = (_address) => {
+  //       toast({
+  //         position: 'bottom',
+  //         title: `SET`,
+  //         description: `send by ${_address}`,
+  //         status: 'success',
+  //         duration: 10000,
+  //         isClosable: true,
+  //       })
+  //     }
+  //     console.log('USEEFFECT CALLED FOR TOAST')
+  //     noe.on('MemberCreated', cb)
+  //     return () => {
+  //       console.log('USEEFFECT CLEANUP FOR TOAST')
+  //       noe.off('MemberCreated', cb)
+  //     }
+  //   }
+  // }, [noe, toast])
 
   return (
     <>

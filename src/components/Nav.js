@@ -24,25 +24,22 @@ import {
 } from "@chakra-ui/core"
 import { NoeContext } from '../App'
 import { Web3Context } from '../hooks/useWeb3'
-var Web3 = require('web3');
-
-
+import { useHistory } from "react-router-dom"
 
 
 
 function Nav() {
 
-  const wallet = new Web3(Web3.givenProvider)
-  console.log(Web3.givenProvider)
-
   const noe = useContext(NoeContext)
   const [web3State, login] = useContext(Web3Context)
+  const history = useHistory()
 
   const [inputAnimalById, setInputAnimalById] = useState(null)
   const [getValueAnimalById, setGetValueAnimalById] = useState(null)
 
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
+
 
   const handleOnClickGetAnimalByID = async () => {
     try {
@@ -51,6 +48,16 @@ function Nav() {
       setGetValueAnimalById(res.toString())
     } catch (e) {
     }
+  }
+
+  const handleStart = async () => {
+    await login()
+    if(web3State.is_logged) {
+      //redirection here
+      history.push("/register")
+      console.log(history.push)
+    }
+    console.log(login)
   }
 
   return (
@@ -98,7 +105,7 @@ function Nav() {
             <Button ml={10} name="button" _hover={{
               bg: "teal.500",
               color: "white",
-            }} bg="brand.100" color="white" textTransform='uppercase' mr={5} onClick={login}>Start</Button>
+            }} bg="brand.100" color="white" textTransform='uppercase' mr={5} onClick={handleStart}>Start</Button>
 
           )}
 
