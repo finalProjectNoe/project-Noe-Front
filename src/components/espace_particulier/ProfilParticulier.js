@@ -12,16 +12,16 @@ function ProfilParticulier() {
 
   const noe = useContext(NoeContext)
   const [web3State, login] = useContext(Web3Context)
-  
+
   const [name, setName] = useState();
   const [tel, setTel] = useState();
 
   useEffect(() => {
-    (async() => {
-      if(noe !== null) {
-      const vetInfo = await noe.getMember()
-      setName(vetInfo[0])
-      setTel(vetInfo[1])
+    (async () => {
+      if (noe !== null) {
+        const vetInfo = await noe.getMember()
+        setName(vetInfo[0])
+        setTel(vetInfo[1])
       }
     })()
   }, [noe, web3State.account])
@@ -38,15 +38,14 @@ function ProfilParticulier() {
             <Image mb={10} borderRadius="full" boxSize="100px" objectFit="cover" src={Man} alt="avatar" />
           </Box>
           <Box>
-          <Text id="nom" aria-label="nom" isDisabled mb={20}/>
-            <Text fontWeight="bold">Nom :</Text>
-            <Input id="tel" aria-label="tel" isDisabled variant="unstyled" value={name}/>
+            <Text mb={20} fontWeight="bold">Nom :</Text>
+            <Input id="tel" aria-label="tel" isDisabled variant="unstyled" value={name} />
             <Text fontWeight="bold">Téléphone :</Text>
-            <Input id="tel" aria-label="tel" isDisabled variant="unstyled" value={tel}/>
+            <Input id="tel" aria-label="tel" isDisabled variant="unstyled" value={tel} />
           </Box>
           <Box>
             <Text fontWeight="bold">Adresse ETH :</Text>
-            <Input id="ETH" aria-label="ETH" isDisabled mb={20} variant="unstyled" value={web3State.account}/>
+            <Input id="ETH" aria-label="ETH" isDisabled mb={20} variant="unstyled" value={web3State.account} />
           </Box>
         </SimpleGrid>
       </Box>
