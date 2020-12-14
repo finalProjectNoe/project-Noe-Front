@@ -138,7 +138,10 @@ Programmes/logiciels/ressources utilisés pour développer notre projet
 
 - [Solidity](https://docs.soliditylang.org/en/v0.6.0/) - Language blockchain
 - [VSCode](https://code.visualstudio.com/) - Editeur de textes
-- []() -
+- [Truffle](https://www.trufflesuite.com/docs/truffle/getting-started/installation)
+- [Remix](http://remix.ethereum.org/)
+- [Openzeppelin contracts ERC721](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC721)
+
 
 ## Versions
 
