@@ -1,10 +1,9 @@
 import React, { useContext, useState } from 'react'
 import { Center, Button, Stack, Input, Heading, FormControl, Box, SimpleGrid, VStack, FormLabel } from '@chakra-ui/core'
-// import { Link } from 'react-router-dom';
 import Nav from './Nav'
 import Footer from './Footer'
 import { NoeContext } from '../App'
-import { Web3Context } from '../hooks/useWeb3'
+import { Web3Context } from "web3-hooks"
 import { useHistory } from "react-router-dom"
  
 
@@ -87,11 +86,11 @@ function Register() {
                   <FormLabel pt={10} htmlFor="nom">Nom</FormLabel >
                   <Input id="nom"
                     value={inputValueName} onChange={(e) => { setInputValueName(e.currentTarget.value) }}
-                    variant="filled" placeholder="Nom" />
+                    variant="filled" placeholder="Nom" aria-label="nom" />
                   <FormLabel pt={10} htmlFor="mobile">Mobile</FormLabel >
                   <Input mb={20} id="mobile"
                     value={inputValuePhoneNumber} onChange={(e) => { setInputValuePhoneNumber(e.currentTarget.value) }}
-                    variant="filled" placeholder="Mobile" aria-label="Mobile" />
+                    variant="filled" placeholder="Mobile" aria-label="mobile" />
                   <Button name="button" _hover={{
                     bg: "teal.500",
                     color: "white",
@@ -105,12 +104,12 @@ function Register() {
               </Center>
               <FormControl isRequired >
                 <Stack >
-                  <FormLabel htmlFor="nom" pt={10}>Nom</FormLabel>
-                  <Input id="nom" value={inputValueNameMember} onChange={(e) => { setInputValueNameMember(e.currentTarget.value) }}
-                    variant="filled" placeholder="Nom" aria-label="Nom" />
-                  <FormLabel htmlFor="mobile" pt={10}>Mobile</FormLabel>
-                  <Input mb={20} id="mobile" value={inputValuePhoneMember} onChange={(e) => { setInputValuePhoneMember(e.currentTarget.value) }}
-                    variant="filled" placeholder="Mobile" aria-label="Mobile" />
+                  <FormLabel htmlFor="name" pt={10}>Nom</FormLabel>
+                  <Input id="name" value={inputValueNameMember} onChange={(e) => { setInputValueNameMember(e.currentTarget.value) }}
+                    variant="filled" placeholder="Nom" aria-label="name" />
+                  <FormLabel htmlFor="tel" pt={10}>Mobile</FormLabel>
+                  <Input mb={20} id="tel" value={inputValuePhoneMember} onChange={(e) => { setInputValuePhoneMember(e.currentTarget.value) }}
+                    variant="filled" placeholder="Mobile" aria-label="tel" />
                   <Button name="button" _hover={{
                     bg: "teal.500",
                     color: "white",

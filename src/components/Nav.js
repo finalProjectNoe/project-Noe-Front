@@ -1,9 +1,8 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { Button, Box, Flex, Divider, Image, Spacer, Input, FormControl, Center, SimpleGrid, InputGroup, Text, } from '@chakra-ui/core'
 import { Link } from 'react-router-dom';
 import Logo from '../assets/logo.png'
 import Burger from '../assets/menu.svg'
-//import { ethers } from 'ethers'
 import {
   Drawer,
   DrawerOverlay,
@@ -23,7 +22,7 @@ import {
   PopoverCloseButton,
 } from "@chakra-ui/core"
 import { NoeContext } from '../App'
-import { Web3Context } from '../hooks/useWeb3'
+import { Web3Context } from "web3-hooks"
 import { useHistory } from "react-router-dom"
 
 
@@ -33,6 +32,7 @@ function Nav() {
   const noe = useContext(NoeContext)
   const [web3State, login] = useContext(Web3Context)
   const history = useHistory()
+
 
   const [inputAnimalById, setInputAnimalById] = useState(null)
   const [getValueAnimalById, setGetValueAnimalById] = useState(null)
@@ -50,15 +50,26 @@ function Nav() {
     }
   }
 
-  const handleStart = async () => {
-    await login()
-    if(web3State.is_logged) {
-      //redirection here
-      history.push("/register")
-      console.log(history.push)
-    }
-    console.log(login)
-  }
+
+  // A VENIR -> Gerer l'etat de la Blockchain
+
+  // const [isRegistred, setIsRegistred] = useState(false)
+
+  // const handleStart = async () => {
+  //   await login()
+  //   // if(web3State.isLogged) {
+  //   //   console.log("test")
+  //   //   //redirection here
+  //   //   history.push("/register")}
+  //   }
+
+  // useEffect(() => {
+  //   if (web3State.isLogged === true && isRegistred === false) {
+  //     setIsRegistred(true)
+  //     history.push("/register")
+  //   } 
+
+  // }, [web3State.isLogged, history, isRegistred])
 
   return (
     <>
@@ -82,16 +93,16 @@ function Nav() {
               <PopoverContent>
                 <PopoverArrow />
                 <PopoverBody>
-                  <Text fontWeight='bold'>Web3: {web3State.is_web3 ? (<Text color="green.500">injected ✅ </Text>
+                  <Text fontWeight='bold'>Web3: {web3State.isWeb3 ? (<Text color="green.500">injected ✅ </Text>
                   ) : (
                       <Text color="red.500">not found 🛑 </Text>
                     )}</Text>
-                  <Text fontWeight='bold'>Wallet: {web3State.is_logged ?
-                    <Text color="green.500">{web3State.is_metamask} ✅ </Text>
+                  <Text fontWeight='bold'>Wallet: {web3State.isLogged ?
+                    <Text color="green.500">{web3State.isMetamask} Connected ✅ </Text>
                     :
-                    <Text color="red.500">{web3State.is_metamask} 🛑 </Text>}</Text>
-                  <Text fontWeight='bold'>Network name: {web3State.network_name}</Text>
-                  <Text fontWeight='bold'>Network id: {web3State.chain_id}</Text>
+                    <Text color="red.500">{web3State.isMetamask} Disconnected 🛑 </Text>}</Text>
+                  <Text fontWeight='bold'>Network name: {web3State.networkName}</Text>
+                  <Text fontWeight='bold'>Network id: {web3State.chainId}</Text>
                   <Text fontWeight='bold'>Account: {web3State.account}</Text>
                   <Text fontWeight='bold'>Balance: {web3State.balance}</Text>
                 </PopoverBody>
@@ -100,17 +111,17 @@ function Nav() {
             </Portal>
           </Popover>
 
-          {!web3State.is_logged && (
+          {!web3State.isLogged && (
 
             <Button ml={10} name="button" _hover={{
               bg: "teal.500",
               color: "white",
-            }} bg="brand.100" color="white" textTransform='uppercase' mr={5} onClick={handleStart}>Start</Button>
+            }} bg="brand.100" color="white" textTransform='uppercase' mr={5} onClick={login}>Start</Button>
 
           )}
 
         </Box>
-        {NoeContext !== null && web3State.chain_id === 4 && (
+        {NoeContext !== null && web3State.chainId === 4 && (
           <>
             <Button name="button" variant="link" ref={btnRef} onClick={onOpen} size="sm" py={10} mr={10} >
               <Image boxSize="25px" src={Burger} alt="menu burger" />
@@ -157,13 +168,7 @@ function Nav() {
                           bg: "brand.100",
                           color: "white",
                         }} color="brand.100" borderColor="brand.100" textTransform='uppercase' mr={5} mb={5} variant="outline">
-                          <Link to="/register">espace particulier</Link>
-                        </Button>
-                        <Button _hover={{
-                          bg: "brand.100",
-                          color: "white",
-                        }} color="brand.100" borderColor="brand.100" name="button" textTransform='uppercase' mr={5} variant="outline">
-                          <Link to="/register">espace vétérinaire</Link>
+                          <Link to="/register">espace inscription</Link>
                         </Button>
                       </Box>
                     </Box>

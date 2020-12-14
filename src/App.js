@@ -3,7 +3,7 @@ import {
   Noe_address,
   Noe_abi,
 } from './contracts/NoeContract'
-import { useContract } from './hooks/useContract'
+import { useContract } from './useContext/useContract'
 import Dapp from './Dapp'
 
 export const NoeContext = React.createContext(null)

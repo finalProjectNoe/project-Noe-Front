@@ -9,7 +9,7 @@ import Contact from './Contact'
 import Footer from './Footer'
 import Animaux from '../assets/animaux.jpg'
 import { NoeContext } from '../App'
-import { Web3Context } from '../hooks/useWeb3'
+import { Web3Context } from "web3-hooks"
 
 
 
@@ -30,22 +30,14 @@ function Home() {
               <Text pt={10} mb={10} textAlign="center">
                 Grâce à Noe, vous gardez contact avec votre animal où qu’il soit. Nous œuvrons pour vous et vos petites boules de poils afin qu’elles ne soient jamais loin de vous, en sécurité et en bonne santé mais également identifiables même à distance.
             </Text>
-              {noe !== null && web3State.chain_id === 4 && (
+              {noe !== null && web3State.chainId === 4 && (
                 <HStack spacing='24px' justifyContent='center'>
-                  <SimpleGrid columns={[1, 1, 2]} spacing="40px" p={10}>
-                    <Button name="button" _hover={{
-                      bg: "teal.500",
-                      color: "white",
-                    }} bg="brand.900" color="white" textTransform='uppercase'>
-                      <Link to="/register">espace particulier</Link>
-                    </Button>
-                    <Button name="button" _hover={{
-                      bg: "teal.500",
-                      color: "white",
-                    }} bg="brand.100" color="white" textTransform='uppercase'>
-                      <Link to="/register">espace vétérinaire</Link>
-                    </Button>
-                  </SimpleGrid>
+                  <Button name="button" _hover={{
+                    bg: "teal.500",
+                    color: "white",
+                  }} bg="brand.900" color="white" textTransform='uppercase'>
+                    <Link to="/register">espace inscription</Link>
+                  </Button>
                 </HStack>
               )}
             </Container>
