@@ -3,6 +3,7 @@ import { Button, Box, Flex, Divider, Image, Spacer, Input, FormControl, Center, 
 import { Link } from 'react-router-dom';
 import Logo from '../assets/logo.png'
 import Burger from '../assets/menu.svg'
+import Suitcase from '../assets/suitcase.svg'
 import {
   Drawer,
   DrawerOverlay,
@@ -76,7 +77,8 @@ function Nav() {
       <Flex fontFamily="Montserrat ">
         <Box py={3}>
           <Link to="/">
-            <Image boxSize="100px" objectFit="cover" src={Logo} alt="logo noé" />
+            <Image width="100%"
+              height="auto" boxSize="100px" objectFit="cover" src={Logo} alt="logo noé" />
           </Link>
         </Box>
         <Spacer />
@@ -84,10 +86,8 @@ function Nav() {
         <Box my={12} as="samp" fontFamily="Montserrat " fontSize="12px" mr={6}>
           <Popover>
             <PopoverTrigger>
-              <Button name="button" _hover={{
-                bg: "teal.500",
-                color: "white",
-              }} bg="brand.100" color="white" textTransform='uppercase'>Provider Status</Button>
+              <Button name="button"><Image width="100%"
+                height="auto" boxSize="25px" src={Suitcase} alt="Provider status" /></Button>
             </PopoverTrigger>
             <Portal>
               <PopoverContent>

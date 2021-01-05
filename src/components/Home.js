@@ -44,7 +44,8 @@ function Home() {
           </Box>
           <Box >
             <Container>
-              <Image pt={20} src={Animaux} alt='animaux' />
+              <Image width="100%"
+                height="auto" pt={20} src={Animaux} alt='animaux' />
             </Container>
           </Box>
         </SimpleGrid>

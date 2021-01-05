@@ -8,9 +8,7 @@ function CommentçaMarche() {
 
   return (
     <Box py={20} fontFamily="Montserrat">
-      <Center>
-        <Heading fontFamily="Montserrat" mb={10} as="h2">Comment ça marche ?</Heading>
-      </Center>
+      <Heading textAlign='center' fontFamily="Montserrat" mb={10} as="h2">Comment ça marche ?</Heading>
       <SimpleGrid columns={[1, 1, 3]} spacing="40px" p={20} fontFamily="Montserrat">
         <Box>
           <VStack spacing={10}>

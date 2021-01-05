@@ -7,11 +7,7 @@ function ChiffreCles() {
   return (
     <Box fontFamily="Montserrat">
       <SimpleGrid columns={[1, 1, 4]} spacing="40px" p={20} bg="beige.100">
-        <Box>
-          <Center>
-            <Heading fontFamily="Montserrat" as="h2">Chiffres-clés</Heading>
-          </Center>
-        </Box>
+        <Heading textAlign='center' fontFamily="Montserrat" as="h2">Chiffres-clés</Heading>
         <Box >
           <VStack>
             <Text fontWeight="bold" fontSize="3xl">5000</Text>
