@@ -11,8 +11,8 @@ function RechercheAnimal() {
   return (
     <>
       <NavVeterinaire />
-      <Flex justifyContent="space-around" fontFamily="Montserrat">
-        <Heading pt={20} fontFamily="Montserrat" as="h2">Tous les animaux</Heading>
+      <Flex justifyContent="space-around" fontFamily="Montserrat, sans-serif">
+        <Heading pt={20} fontFamily="Montserrat, sans-serif" as="h2">Tous les animaux</Heading>
         <Button name="button" mt={20} _hover={{
           bg: "brand.100",
           color: "white",
@@ -20,7 +20,7 @@ function RechercheAnimal() {
           <Link to="/ajout_animal">Ajouter</Link>
         </Button>
       </Flex>
-      <Box py={20} px={250} fontFamily="Montserrat">
+      <Box py={20} px={250} fontFamily="Montserrat, sans-serif">
         <SimpleGrid columns={[1, 1, 5]} spacing="40px" p={20} borderWidth="1px" borderRadius={5}>
           <Box>
             <Image mb={10} borderRadius="full" boxSize="100px" objectFit="cover" src={cat_profil} alt="avatar animal" />

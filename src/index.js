@@ -21,7 +21,7 @@ const theme = extendTheme({
   style: {
     global: {
       "html, body": {
-        fontFamily: 'Montserrat, sans-serif',
+        fontFamily: 'Montserrat, sans-serif, sans-serif',
       },
     },
   },

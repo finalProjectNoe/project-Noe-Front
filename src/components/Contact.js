@@ -5,17 +5,17 @@ function Contact() {
 
   return (
     <>
-      <Box py={20} fontFamily="Montserrat">
+      <Box py={20} fontFamily="Montserrat, sans-serif">
         <Center>
-          <Heading fontFamily="Montserrat" mb={10}>Contact</Heading>
+          <Heading fontFamily="Montserrat, sans-serif" mb={10}>Contact</Heading>
         </Center>
         <VStack>
           <HStack>
-            <SimpleGrid columns={1} spacing="20px" fontFamily="Montserrat">
+            <SimpleGrid columns={1} spacing="20px" fontFamily="Montserrat, sans-serif">
               <FormControl isRequired>
-                <FormLabel htmlFor="email">Email</FormLabel>
+                <FormLabel ml={5} htmlFor="email">Email</FormLabel>
                 <Input id="email" type="email" placeholder="Email" variant="filled" aria-label="email" />
-                <FormLabel mt={10} htmlFor="message">Message</FormLabel>
+                <FormLabel mt={10} ml={5} htmlFor="message">Message</FormLabel>
                 <Textarea id="message" rows="5" cols="50" borderWidth="1px" placeholder="Message" variant="filled" aria-label="Message" />
               </FormControl >
               <Center>

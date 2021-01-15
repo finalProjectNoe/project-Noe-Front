@@ -15,7 +15,6 @@ function ProfilParticulier() {
 
   const [name, setName] = useState();
   const [tel, setTel] = useState();
-
   useEffect(() => {
     (async () => {
       if (noe !== null) {
@@ -30,10 +29,10 @@ function ProfilParticulier() {
     <>
       <NavParticulier />
       <Center>
-        <Heading fontFamily="Montserrat" mt={20} pt={10} as="h2">Mon espace</Heading>
+        <Heading fontFamily="Montserrat, sans-serif" mt={20} pt={10} as="h2">Mon espace</Heading>
       </Center>
-      <Box fontFamily="Montserrat">
-        <SimpleGrid my={20} mx={20} columns={[1, 1, 3]} spacing="40px" p={30} fontFamily="Montserrat" borderWidth="1px" bg='brand.900' color='white' borderRadius={5}>
+      <Box fontFamily="Montserrat, sans-serif">
+        <SimpleGrid my={20} mx={20} columns={[1, 1, 3]} spacing="40px" p={30} fontFamily="Montserrat, sans-serif" borderWidth="1px" bg='brand.900' color='white' borderRadius={5}>
           <Box>
             <Image mb={10} borderRadius="full" boxSize="100px" objectFit="cover" src={Man} alt="avatar" />
           </Box>
@@ -50,10 +49,10 @@ function ProfilParticulier() {
         </SimpleGrid>
       </Box>
       <Center>
-        <Heading mt={20} fontFamily="Montserrat" as="h2">Mes animaux</Heading>
+        <Heading mt={20} fontFamily="Montserrat, sans-serif" as="h2">Mes animaux</Heading>
       </Center>
-      <Box fontFamily="Montserrat" mb={200}>
-        <SimpleGrid my={20} mx={20} columns={[1, 1, 4]} spacing="40px" p={30} fontFamily="Montserrat" borderWidth="1px" borderRadius={5}>
+      <Box fontFamily="Montserrat, sans-serif" mb={200}>
+        <SimpleGrid my={20} mx={20} columns={[1, 1, 4]} spacing="40px" p={30} fontFamily="Montserrat, sans-serif" borderWidth="1px" borderRadius={5}>
           <Box>
             <Image mb={10} borderRadius="full" boxSize="100px" objectFit="cover" src={cat_profil} alt="avatar animal" />
           </Box>

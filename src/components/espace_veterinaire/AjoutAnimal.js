@@ -25,12 +25,12 @@ function AjoutAnimal() {
   return (
     <>
       <NavVeteinaire />
-      <VStack py={20} fontFamily="Montserrat">
+      <VStack py={20} fontFamily="Montserrat, sans-serif">
         <Box my={10}>
           <SimpleGrid columns={[1]} spacing="40px">
             <Box borderWidth="1px" p={50} borderRadius={5}>
               <Center>
-                <Heading fontFamily="Montserrat" mb={10}>Ajouter un Animal</Heading>
+                <Heading fontFamily="Montserrat, sans-serif" mb={10}>Ajouter un Animal</Heading>
               </Center>
               <FormControl>
                 <Stack >

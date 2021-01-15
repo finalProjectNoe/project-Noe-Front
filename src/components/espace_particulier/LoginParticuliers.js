@@ -27,12 +27,12 @@ function LoginParticulier() {
   return (
     <>
       <Nav />
-      <VStack py={20} fontFamily="Montserrat">
+      <VStack py={20} fontFamily="Montserrat, sans-serif">
         <Box my={10}>
           <SimpleGrid columns={[1, 1, 2]} spacing="40px">
             <Box borderWidth="1px" p={50} borderRadius={5}>
               <Center>
-                <Heading fontFamily="Montserrat">Inscription Particuliers</Heading>
+                <Heading fontFamily="Montserrat, sans-serif">Inscription Particuliers</Heading>
               </Center>
               <FormControl isRequired >
                 <Stack >
@@ -51,7 +51,7 @@ function LoginParticulier() {
             </Box>
             <Box borderWidth="1px" p={50} borderRadius={5}>
               <Center>
-                <Heading fontFamily="Montserrat">Connexion</Heading>
+                <Heading fontFamily="Montserrat, sans-serif">Connexion</Heading>
               </Center>
               <FormControl isRequired>
                 <Stack >

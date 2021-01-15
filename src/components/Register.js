@@ -5,7 +5,7 @@ import Footer from './Footer'
 import { NoeContext } from '../App'
 import { Web3Context } from "web3-hooks"
 import { useHistory } from "react-router-dom"
- 
+
 
 
 function Register() {
@@ -23,30 +23,30 @@ function Register() {
 
   const handleOnClickCreateMember = async () => {
     try {
-    const CMTX1 = await noe.createMember(inputValueNameMember, inputValuePhoneMember)
+      const CMTX1 = await noe.createMember(inputValueNameMember, inputValuePhoneMember)
       const cb = () => {
         history.push("/profil_particulier")
-        
+
       }
       const filter = noe.filters.MemberCreated(web3State.account)
       noe.once(filter, cb)
-  } catch (e) {
+    } catch (e) {
 
+    }
   }
-}
 
   const handleOnClickCreateVeterinary = async () => {
     try {
-    const CVTX1 = await noe.createVeterinary(inputValueName, inputValuePhoneNumber)
-    const cb = () => {
-      history.push("/profil_veterinaire")
-      
-    }
-    const filter = noe.filters.VeterinaryCreated(web3State.account)
-    noe.once(filter, cb)
-} catch (e) {
+      const CVTX1 = await noe.createVeterinary(inputValueName, inputValuePhoneNumber)
+      const cb = () => {
+        history.push("/profil_veterinaire")
 
-}
+      }
+      const filter = noe.filters.VeterinaryCreated(web3State.account)
+      noe.once(filter, cb)
+    } catch (e) {
+
+    }
   }
 
 
@@ -74,12 +74,12 @@ function Register() {
   return (
     <>
       <Nav />
-      <VStack py={20} fontFamily="Montserrat">
+      <VStack py={20} fontFamily="Montserrat, sans-serif">
         <Box my={10} >
           <SimpleGrid columns={[1, 1, 2]} spacing="40px">
             <Box borderWidth="1px" p={50} borderRadius={5}>
               <Center>
-                <Heading fontFamily="Montserrat" mb={10}>Inscription Vétérinaires</Heading>
+                <Heading fontFamily="Montserrat, sans-serif" mb={10}>Inscription Vétérinaires</Heading>
               </Center>
               <FormControl isRequired>
                 <Stack>
@@ -100,7 +100,7 @@ function Register() {
             </Box>
             <Box borderWidth="1px" p={50} borderRadius={5}>
               <Center>
-                <Heading fontFamily="Montserrat" mb={10}>Inscription Particuliers</Heading>
+                <Heading fontFamily="Montserrat, sans-serif" mb={10}>Inscription Particuliers</Heading>
               </Center>
               <FormControl isRequired >
                 <Stack >

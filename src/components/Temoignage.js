@@ -7,11 +7,11 @@ function Temoignage() {
 
   return (
 
-    <Box py={20} bg="beige.100" fontFamily="Montserrat">
+    <Box py={20} bg="beige.100" fontFamily="Montserrat, sans-serif">
       <Center>
-        <Heading fontFamily="Montserrat" mb={10} as="h2">Témoignages</Heading>
+        <Heading fontFamily="Montserrat, sans-serif" mb={10} as="h2">Témoignages</Heading>
       </Center>
-      <SimpleGrid columns={[1, 1, 3]} spacing="40px" p={20} fontFamily="Montserrat">
+      <SimpleGrid columns={[1, 1, 3]} spacing="40px" p={20} fontFamily="Montserrat, sans-serif">
         <Box>
           <VStack spacing={10}>
             <Image borderRadius="full" boxSize="100px" objectFit="cover" src={Woman} alt="Avatar" />

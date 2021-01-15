@@ -56,12 +56,12 @@ function Admin() {
   return (
     <>
       <Nav />
-      <VStack py={20} fontFamily="Montserrat">
+      <VStack py={20} fontFamily="Montserrat, sans-serif">
         <Box my={10}>
           <SimpleGrid columns={[1, 1, 2]} spacing="40px">
             <Box borderWidth="1px" p={50} borderRadius={5}>
               <Center>
-                <Heading fontFamily="Montserrat" mb={10}>Approuvre vétérinaire</Heading>
+                <Heading fontFamily="Montserrat, sans-serif" mb={10}>Approuvre vétérinaire</Heading>
               </Center>
               <Center>
                 <FormControl>
@@ -79,7 +79,7 @@ function Admin() {
             </Box>
             <Box borderWidth="1px" p={50} borderRadius={5}>
               <Center>
-                <Heading fontFamily="Montserrat" mb={10}>Liste</Heading>
+                <Heading fontFamily="Montserrat, sans-serif" mb={10}>Liste</Heading>
               </Center>
               <Box>
                 <Button onClick={handleOnClickGetName} my={5} _hover={{

@@ -9,13 +9,13 @@ import Linkedin from '../assets/linkedin.svg'
 function Footer() {
   return (
 
-    <Box py={10} bg="brand.900" fontFamily="Montserrat">
+    <Box py={10} bg="brand.900" fontFamily="Montserrat, sans-serif">
       <Center>
         <Link to="/">
           <Image borderRadius="full" boxSize="100px" src={Logo} alt="logo" />
         </Link>
       </Center>
-      <Flex justifyContent="center" p={5} fontFamily="Montserrat">
+      <Flex justifyContent="center" p={5} fontFamily="Montserrat, sans-serif">
         <Box>
           <Image mx={5} borderRadius="full" boxSize="32px" objectFit="cover" src={Facebook} alt="Facebook" />
         </Box>

@@ -1,13 +1,13 @@
 import React from 'react'
-import { Heading, Text, Center, Box, SimpleGrid, VStack } from '@chakra-ui/core'
+import { Heading, Text, Box, SimpleGrid, VStack } from '@chakra-ui/core'
 
 
 function ChiffreCles() {
 
   return (
-    <Box fontFamily="Montserrat">
+    <Box fontFamily="Montserrat, sans-serif">
       <SimpleGrid columns={[1, 1, 4]} spacing="40px" p={20} bg="beige.100">
-        <Heading textAlign='center' fontFamily="Montserrat" as="h2">Chiffres-clés</Heading>
+        <Heading textAlign='center' fontFamily="Montserrat, sans-serif" as="h2">Chiffres-clés</Heading>
         <Box >
           <VStack>
             <Text fontWeight="bold" fontSize="3xl">5000</Text>

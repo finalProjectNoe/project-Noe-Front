@@ -21,11 +21,11 @@ function Home() {
   return (
     <>
       <Nav />
-      <Box fontFamily="Montserrat" py={20}>
+      <Box fontFamily="Montserrat, sans-serif" py={20}>
         <SimpleGrid columns={[1, 1, 2]} spacing="40px" >
           <Box>
             <Container>
-              <Heading fontFamily="Montserrat" textAlign="center" size="3xl" my={10} as='h1'>Référencez votre NOE</Heading>
+              <Heading fontFamily="Montserrat, sans-serif" textAlign="center" size="3xl" my={10} as='h1'>Référencez votre NOE</Heading>
 
               <Text pt={10} mb={10} textAlign="center">
                 Grâce à Noe, vous gardez contact avec votre animal où qu’il soit. Nous œuvrons pour vous et vos petites boules de poils afin qu’elles ne soient jamais loin de vous, en sécurité et en bonne santé mais également identifiables même à distance.
