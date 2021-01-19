@@ -1,5 +1,5 @@
-import React, { useContext, useState, useColorMode } from 'react'
-import { Button, Box, Divider, Input, FormControl, Image, Flex, Center, Spacer, InputGroup, SimpleGrid, Text } from '@chakra-ui/core'
+import React, { useContext, useState } from 'react'
+import { Button, Box, Divider, Input, FormControl, Image, Flex, Center, Spacer, InputGroup, SimpleGrid, Text, useColorMode } from '@chakra-ui/core'
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png'
 import Burger from '../../assets/menu.svg'
