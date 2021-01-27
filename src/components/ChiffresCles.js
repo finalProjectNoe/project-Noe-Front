@@ -1,12 +1,17 @@
 import React from 'react'
-import { Heading, Text, Box, SimpleGrid, VStack } from '@chakra-ui/core'
+import { Heading, Text, Box, SimpleGrid, VStack, useColorModeValue } from '@chakra-ui/core'
+
+
 
 
 function ChiffreCles() {
 
+  const bg = useColorModeValue("beige.100", "beige.100")
+  const color = useColorModeValue("Black", "Black")
+
   return (
     <Box fontFamily="Montserrat, sans-serif">
-      <SimpleGrid columns={[1, 1, 4]} spacing="40px" p={20} bg="beige.100">
+      <SimpleGrid columns={[1, 1, 4]} spacing="40px" p={20} bg={bg} color={color}>
         <Heading textAlign='center' fontFamily="Montserrat, sans-serif" as="h2">Chiffres-clés</Heading>
         <Box >
           <VStack>

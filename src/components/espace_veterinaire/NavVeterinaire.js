@@ -2,7 +2,10 @@ import React, { useContext, useState } from 'react'
 import { Button, Box, Divider, Input, FormControl, Image, Flex, Center, Spacer, InputGroup, SimpleGrid, Text, useColorMode } from '@chakra-ui/core'
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png'
-import Burger from '../../assets/menu.svg'
+import BurgerBlack from '../../assets/menu_black.svg'
+import BurgerWhite from '../../assets/menu_white.svg'
+import SleepMode from '../../assets/sleep-mode.svg'
+import Sun from '../../assets/sun.svg'
 import {
   Drawer,
   DrawerOverlay,
@@ -13,14 +16,10 @@ import {
   Icon
 } from "@chakra-ui/core"
 import { NoeContext } from '../../App'
-import SleepMode from '../../assets/sleep-mode.svg'
-var Web3 = require('web3');
+
+
 
 function NavVeteinaire() {
-
-
-  const wallet = new Web3(Web3.givenProvider)
-  console.log(Web3.givenProvider)
 
   const noe = useContext(NoeContext)
 
@@ -50,10 +49,11 @@ function NavVeteinaire() {
         </Box>
         <Spacer />
         <Button name="button" onClick={toggleColorMode} my={10} mr={10}>
-          <Image width="100%"
-            height="auto" boxSize="25px" src={SleepMode} alt="Mode" /></Button>
+          {colorMode === "light" ? <Image width="100%"
+            height="auto" boxSize="25px" src={SleepMode} alt="Mode" /> : <Image width="100%"
+              height="auto" boxSize="25px" src={Sun} alt="Mode" />}</Button>
         <Button name="button" variant="link" ref={btnRef} onClick={onOpen} size="sm" py={10} mr={10} >
-          <Image boxSize="25px" src={Burger} alt="menu" />
+          {colorMode === "light" ? <Image boxSize="25px" src={BurgerBlack} alt="menu burger" /> : <Image boxSize="25px" src={BurgerWhite} alt="menu burger" />}
         </Button>
         <Drawer
           isOpen={isOpen}

@@ -1,10 +1,12 @@
 import React, { useContext, useState } from 'react'
-import { Button, Box, Flex, Divider, Image, Spacer, Input, FormControl, Center, SimpleGrid, InputGroup, Text, HStack, useColorMode } from '@chakra-ui/core'
+import { Button, Box, Flex, Divider, Image, Spacer, Input, FormControl, Center, SimpleGrid, InputGroup, Text, HStack, useColorMode, useColorModeValue } from '@chakra-ui/core'
 import { Link } from 'react-router-dom';
 import Logo from '../assets/logo.png'
-import Burger from '../assets/menu.svg'
+import BurgerBlack from '../assets/menu_black.svg'
+import BurgerWhite from '../assets/menu_white.svg'
 import Suitcase from '../assets/suitcase.svg'
 import SleepMode from '../assets/sleep-mode.svg'
+import Sun from '../assets/sun.svg'
 import {
   Drawer,
   DrawerOverlay,
@@ -39,6 +41,7 @@ function Nav() {
   const [inputAnimalById, setInputAnimalById] = useState(null)
   const [getValueAnimalById, setGetValueAnimalById] = useState(null)
   const { colorMode, toggleColorMode } = useColorMode()
+
 
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
@@ -83,10 +86,10 @@ function Nav() {
                 height="auto" boxSize="100px" objectFit="cover" src={Logo} alt="logo noé" />
             </Link>
 
-            <Button ml={10} name="button" _hover={{
+            {/*<Button ml={10} name="button" _hover={{
               bg: "teal.500",
               color: "white",
-            }} bg="brand.100" color="white" textTransform='uppercase' mr={5}><Link to="/admin">Admin</Link></Button>
+            }} bg="brand.100" color="white" textTransform='uppercase' mr={5}><Link to="/admin">Admin</Link></Button>*/}
 
           </HStack>
         </Box>
@@ -130,14 +133,16 @@ function Nav() {
 
             )}
             <Button name="button" onClick={toggleColorMode}>
-              <Image width="100%"
-                height="auto" boxSize="25px" src={SleepMode} alt="Mode" /></Button>
+              {colorMode === "light" ? <Image width="100%"
+                height="auto" boxSize="25px" src={SleepMode} alt="Mode" /> : <Image width="100%"
+                  height="auto" boxSize="25px" src={Sun} alt="Mode" />}
+            </Button>
           </HStack>
         </Box>
         {noe !== null && web3State.chainId === 4 && (
           <>
             <Button name="button" variant="link" ref={btnRef} onClick={onOpen} size="sm" py={10} mr={10} >
-              <Image boxSize="25px" src={Burger} alt="menu burger" />
+              {colorMode === "light" ? <Image boxSize="25px" src={BurgerBlack} alt="menu burger" /> : <Image boxSize="25px" src={BurgerWhite} alt="menu burger" />}
             </Button>
             <Drawer
               isOpen={isOpen}

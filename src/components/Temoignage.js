@@ -1,13 +1,16 @@
 import React from 'react'
-import { Heading, Text, VStack, Center, Box, SimpleGrid, Image } from '@chakra-ui/core'
+import { Heading, Text, VStack, Center, Box, SimpleGrid, Image, useColorModeValue } from '@chakra-ui/core'
 import Man from '../assets/man.svg'
 import Woman from '../assets/woman_1.svg'
 
 function Temoignage() {
 
+  const bg = useColorModeValue("beige.100", "beige.100")
+  const color = useColorModeValue("Black", "Black")
+
   return (
 
-    <Box py={20} bg="beige.100" fontFamily="Montserrat, sans-serif">
+    <Box py={20} bg={bg} color={color} fontFamily="Montserrat, sans-serif">
       <Center>
         <Heading fontFamily="Montserrat, sans-serif" mb={10} as="h2">Témoignages</Heading>
       </Center>
