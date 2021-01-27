@@ -5,7 +5,7 @@ import { ChakraProvider } from '@chakra-ui/core'
 import 'focus-visible/dist/focus-visible'
 import App from './App'
 import { Web3Provider } from "web3-hooks"
-import { extendTheme, GlobalStyle } from "@chakra-ui/react"
+import { extendTheme, GlobalStyle, ColorModeScript } from "@chakra-ui/react"
 
 const theme = extendTheme({
   colors: {
@@ -31,6 +31,7 @@ ReactDOM.render(
   <React.StrictMode>
     <ChakraProvider theme={theme} resetCSS={true}>
       <GlobalStyle style={theme} />
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <Web3Provider>
         <App />
       </Web3Provider>
